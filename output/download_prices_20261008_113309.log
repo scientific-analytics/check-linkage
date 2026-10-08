@@ -1,0 +1,4 @@
+2026-10-08 11:33:09,046 - INFO - === Starting Download Prices Around Linkage ===
+2026-10-08 11:33:09,171 - INFO - Loaded 741 rows in 362 groups from /home/rudy/PycharmProjects/check linkage/Link-candidates.xlsx
+2026-10-08 11:33:09,227 - INFO - Asset ids loaded from /home/rudy/PycharmProjects/check_referential/data_gov/2026-09-18/_universe/auc_asset.csv: 0 candidate rows without asset id
+2026-10-08 11:33:09,227 - INFO - Connecting to database...

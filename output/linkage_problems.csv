@@ -1,0 +1,31 @@
+group,company,rows,reason
+19,Alphabet Inc.,"19.1, 19.2, 19.3, 19.4",2 old / 2 new trading items
+26,American Tower Corporation,"26.1, 26.2",no price for new trading item after last common price in window
+40,AusNet Pty Ltd,"40.1, 40.2",no price for new trading item after last common price in window
+46,Bank of Ireland Group plc,"46.1, 46.2",no price for new trading item after last common price in window
+50,Beazley plc,"50.1, 50.2",no price for new trading item after last common price in window
+56,Biglari Holdings Inc.,"56.1, 56.2, 56.3",1 old / 2 new trading items
+85,Cape plc,"85.1, 85.2",no price for new trading item after last common price in window
+91,Centamin Limited,"91.1, 91.2",no price for new trading item after last common price in window
+98,Coast Entertainment Holdings Limited,"98.1, 98.2",no price for new trading item after last common price in window
+129,Esprit Energy Trust,"129.1, 129.2, 129.3",2 old / 1 new trading items
+143,Fidelity National Financial Inc.,"143.1, 143.2, 143.3",1 old / 2 new trading items
+157,H. Lundbeck A/S,"157.1, 157.2, 157.3",1 old / 2 new trading items
+189,Liberty Global Ltd.,"189.1, 189.2, 189.3, 189.4",2 old / 2 new trading items
+193,Lionsgate Studios Corp.,"193.1, 193.2, 193.3",2 old / 1 new trading items
+194,Lionsgate Studios Corp.,"194.1, 194.2, 194.3",1 old / 2 new trading items
+199,Man Group Plc,"199.1, 199.2",no price for new trading item in window
+203,Mebuki Financial GroupInc.,"203.1, 203.2",no price for new trading item after last common price in window
+204,Mediclinic Group Limited,"204.1, 204.2",gap of 7 business days between last common price 2016-02-05 00:00:00 and new price
+230,Odfjell SE,"230.1, 230.2",no price for new trading item after last common price in window
+233,Old Mutual Limited,"233.1, 233.2",no price for new trading item after last common price in window
+240,Paramount Skydance Corporation,"240.1, 240.2, 240.3",2 old / 1 new trading items
+241,Paramount Skydance Corporation,"241.1, 241.2, 241.3, 241.4",2 old / 2 new trading items
+287,SunPower Corporation,"287.1, 287.2, 287.3",2 old / 1 new trading items
+288,Sunshine Lake Pharma Co. Ltd.,"288.1, 288.2",gap of 7 business days between last common price 2025-07-29 00:00:00 and new price
+290,Swiss Re AG,"290.1, 290.2",no price for new trading item in window
+299,Telecom Italia S.p.A.,"299.1, 299.2, 299.3",1 old / 2 new trading items
+334,WCT Holdings Berhad,"334.1, 334.2",no price for new trading item in window
+341,Warner Bros. Discovery Inc.,"341.1, 341.2, 341.3",2 old / 1 new trading items
+342,Warner Bros. Discovery Inc.,"342.1, 342.2, 342.3",1 old / 2 new trading items
+351,Wilh. Wilhelmsen Holding ASA,"351.1, 351.2",no price for new trading item after last common price in window

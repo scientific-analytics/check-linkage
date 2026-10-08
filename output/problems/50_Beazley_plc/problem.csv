@@ -1,0 +1,2 @@
+group,company,rows,reason
+50,Beazley plc,"50.1, 50.2",no price for new trading item after last common price in window
