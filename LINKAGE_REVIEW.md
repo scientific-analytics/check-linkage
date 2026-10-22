@@ -53,9 +53,9 @@ Old Mutual (233), Swiss Re (290), WCT (334), Esprit (129).
 
 ## État de `Historical_DocLinkage_v2.xlsx`
 
-- `DocLinkage` : **346 lignes** = 333 lignes de Step 3 + 13 linkages manuelles, aucun `Link` en double.
-- `Problems` : **13 groupes, 37 lignes**.
-- `Decisions` : **22 lignes**.
+- `DocLinkage` : **348 lignes** = 333 lignes de Step 3 + 15 linkages manuelles, aucun `Link` en double.
+- `Problems` : **0 groupe, 0 ligne** — tous les groupes de `linkage_problems.csv` ont été tranchés (session du 2026-10-22).
+- `Decisions` : **40 lignes**.
 
 Vérifié : toutes les linkages validées sont présentes avec les bonnes valeurs, toutes les non validées sont absentes,
 les 333 lignes de Step 3 sont identiques et dans le même ordre.
@@ -90,12 +90,24 @@ par Step 2. La linkage aller (2008) avait été écartée par Step 2 parce que l
 | 143 | Fidelity National Financial | 1094:QIW → 2291:FYR (FNF), 2014-06-30, 32.76, share 276 ; 3806:KIF FNFV = new security |
 | 157 | Lundbeck | 1119:MAK → 3414:HIW (B Shares), 2022-06-10, 32.50, share 794.272 ; 6922:SIK A Shares = new security |
 | 129 | Esprit Energy Trust | no linkage : facteur d'ajustement (Common Shares échangées ~4 pour 1 part + actions ProspEx le 2004-10-05, non ajusté dans CIQ) |
+| 189 | Liberty Global | no linkage : 2 old (Series A/C) / 2 new (Class A/C), ratio exactement 2:1 sur toute la fenêtre de prix (Virgin Media acq., Inc → plc) — ratio non-1:1 malgré la régularité |
+| 193 | Lionsgate | no linkage : merge Class A + Class B → Common Shares le 2025-05-06, 2 old / 1 new, ratio non-1:1 |
+| 194 | Lionsgate | no linkage : split Old Common Shares → Class A + Class B le 2016-12-09, 1 old / 2 new, ratio non-1:1 |
+| 204 | Mediclinic | no linkage : fusion avec Al Noor Hospitals (2016-02-16), changement de devise ZAR→GBP et de bourse (Johannesburg→Londres), ratio non-1:1 |
+| 230 | Odfjell | no linkage : Series A et Series B sont deux classes permanentes cotées depuis 1992 (overlap confirmé dans AUC aux reviews 2005-03-18 et 2005-06-17), pas d'événement corporate |
+| 240 | Paramount Skydance | no linkage : fusion Skydance (2025-08-06), consolidation Class A + Class B → Class B, ratio non-uniforme (A 1.5:1, B 1:1), pas d'overlap AUC |
+| 241 | Paramount Skydance | no linkage : spin-off Viacom/CBS (2006-01-03), Old Viacom scindé en CBS Corporation (ce companyid) et New Viacom Inc. (companyid 25403751, non suivi dans ce pipeline), ratio actions non uniforme (0.47 B, 0.50 A) |
+| 287 | SunPower | 3897:BOD (Class A, la plus liquide) → 7045:MEM (Common Stock), 2011-11-17, 7.50, share 1 ; reclassification 1-pour-1 confirmée par SEC/Jones Day ; 7965:KUG Class B non lié |
+| 288 | Sunshine Lake Pharma | no linkage : gap de 7 jours ouvrés et saut de prix ~4.3x entre 3095:BEG (13.02) et 2966:WUC (56.25), trop important |
+| 299 | Telecom Italia | no linkage : reverse merger avec la société mère Olivetti S.p.A. (2003-08-04), prix/actions incohérents entre Old Ordinary Shares et les 2 nouvelles lignes (Ordinary + Saving Shares) |
+| 341 | Warner Bros. Discovery | 7378:NOD (Series A, la plus liquide) → 7463:MON (New Ordinary Shares), 2022-04-08, 24.43, share 1 ; reclassification 1-pour-1 confirmée par le 10-K SEC (fusion WarnerMedia/Discovery) ; 6251:CEV Series C non liée |
+| 342 | Warner Bros. Discovery | no linkage : restructuration Discovery Holding Company → Discovery Communications (2008-09-18), chaque action convertie en 0.5 Series A + 0.5 Series C (SEC S-4 confirmé), ratio non-1:1 |
+| 351 | Wilh. Wilhelmsen | no linkage : Class A et Class B sont deux classes permanentes cotées depuis 1992, société seulement sporadiquement dans AUC (12 reviews sur 98, trous de ~7 ans et ~6.75 ans), pas d'événement corporate |
 
 ## Groupes restant dans `Problems`
 
-Liberty Global (189), Lionsgate (193, 194), Mediclinic (204), Odfjell (230), Paramount Skydance (240, 241),
-SunPower (287), Sunshine Lake Pharma (288), Telecom Italia (299), Warner Bros. Discovery (341, 342),
-Wilh. Wilhelmsen (351). Les notes de la revue sont dans la colonne `note`.
+Aucun — tous les groupes de `linkage_problems.csv` ont été tranchés (session du 2026-10-22). Voir la table
+ci-dessus pour le détail des décisions.
 
 ## Points ouverts
 

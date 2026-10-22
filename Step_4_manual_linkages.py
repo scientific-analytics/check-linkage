@@ -68,6 +68,17 @@ MANUAL_LINKAGES = {
           "2291:FYR", 276, 32.76, datetime(2014, 6, 30), "correct linkage, 3806:KIF FNFV is a new security (no linkage)"),
     157: ("1119:MAK", 671670, 83094656, 83100652, "H. Lundbeck A/S", "B Shares", "3414:HIW",
           794.272, 32.5, datetime(2022, 6, 10), "correct linkage, 6922:SIK A Shares is a new security (no linkage)"),
+    287: ("3897:BOD", 11420997, 24806828, 24806848, "SunPower Corporation", "Class A Common Stock", "7045:MEM",
+          1, 7.50, datetime(2011, 11, 17), "correct linkage, 1-for-1 reclassification of Class A and Class B into "
+                                            "a single Common Stock class (SEC-confirmed), linked via Class A "
+                                            "(most liquid); 7965:KUG Class B not linked (no linkage)"),
+    341: ("7378:NOD", 22666093, 49031555, 49031559, "Warner Bros. Discovery Inc.", "Series A Common Stock",
+          "7463:MON", 1, 24.43, datetime(2022, 4, 8), "correct linkage, 1-for-1 reclassification of Series A, B "
+                                                        "and C into New Ordinary Shares following the WarnerMedia/"
+                                                        "Discovery merger (SEC 10-K confirmed), linked via Series A "
+                                                        "(most liquid, price identical to new line every day in "
+                                                        "the overlap window); 6251:CEV Series C not linked (no "
+                                                        "linkage)"),
 }
 
 # group: (company, tradingitemid, asset, security) of the new trading items that are new securities, not linkages
@@ -84,6 +95,56 @@ NO_LINKAGE = {
           "2 old / 1 new trading items (Class A 5761:MYL, Class B 1018:KUT merged into Trust Units on 2005-07-05): "
           "not validated because of a price adjustment factor (Common Shares 7149:VOQ exchanged ~4 for 1 trust unit "
           "+ ProspEx shares on 2004-10-05, 4.03 -> ~13, not adjusted in CIQ)"),
+    189: ("Liberty Global Ltd.", [(22743070, "1899:QIC", "Liberty Global Class A Common Stock"),
+                                  (23708238, "4888:GIK", "Liberty Global Class C Common Stock")],
+          "2 old / 2 new trading items (Old Series A 1615:COJ, Old Series C 3163:SOD, last price 2013-06-07): "
+          "no linkage, 1:1 share exchange Liberty Global Inc -> Liberty Global plc following Virgin Media "
+          "acquisition but price and share count different"),
+    193: ("Lionsgate Studios Corp.", [(1941153615, "6501:LUN", "Common Shares")],
+          "2 old / 1 new trading items (Class A Voting 4271:VYN, Class B Non-Voting 4538:PEJ, last price "
+          "2025-05-06): no linkage, Class A and Class B merged into Common Shares on 2025-05-06, non 1:1 ratio"),
+    194: ("Lionsgate Studios Corp.", [(412297487, "4271:VYN", "Class A Voting Shares"),
+                                      (412297486, "4538:PEJ", "Class B Non-Voting Shares")],
+          "1 old / 2 new trading items (Old Common Shares 3138:MOG, last price 2016-12-08): no linkage, split "
+          "into Class A Voting and Class B Non-Voting Shares on 2016-12-09, non 1:1 ratio"),
+    204: ("Mediclinic Group Limited", [(241673056, "4650:POQ", "Ordinary Shares")],
+          "1 old / 1 new trading items (Old Ordinary Shares 1404:PYF, Johannesburg ZAR, last price 2016-02-05): "
+          "no linkage, merger with Al Noor Hospitals creating Mediclinic International plc, listed in London GBP "
+          "from 2016-02-16 after a trading halt, currency change and non 1:1 share exchange ratio"),
+    230: ("Odfjell SE", [(22260586, "1367:QIR", "Series A Shares")],
+          "1 old / 1 new trading items (Series B Shares 7195:FAB): no linkage, Series A and Series B are two "
+          "permanent share classes both fully listed since 1992, overlapping in AUC (both present 2005-03-18 and "
+          "2005-06-17), AUC just alternates which one is the main line"),
+    241: ("Paramount Skydance Corporation", [(24993622, "2719:LYV", "Old Class B Common Stock"),
+                                              (25082106, "6685:TYP", "Old Class A Common Stock")],
+          "2 old / 2 new trading items (Former Viacom Class B 3442:HAM, Former Viacom Class A 2776:SIP): no "
+          "linkage, Old Viacom split into CBS Corporation (this companyid) and New Viacom Inc. (companyid "
+          "25403751) on 2006-01-03, non-uniform share ratio (0.47 for B, 0.50 for A), no overlap in AUC between "
+          "2005-12-16 and 2006-03-17 reviews"),
+    240: ("Paramount Skydance Corporation", [(1955787307, "4450:RAB", "Class B Common Stock")],
+          "2 old / 1 new trading items (Old Class A 6685:TYP, Old Class B 2719:LYV, last price 2025-08-06): no "
+          "linkage, consolidation into new Class B Common Stock (Skydance Corp.) following Skydance's acquisition "
+          "of Paramount Global, non-uniform ratio (Class A 1.5:1, Class B 1:1), no overlap in AUC between "
+          "2025-06-20 and 2025-09-19 reviews"),
+    288: ("Sunshine Lake Pharma Co. Ltd.", [(1949996720, "2966:WUC", "Foreign Shares-Foreign Listed")],
+          "1 old / 1 new trading items (Old Foreign Shares-Foreign Listed 3095:BEG, last price 13.02 on "
+          "2025-07-29): no linkage, 7 business day gap and price jump to 56.25 (~4.3x), too large to accept as a "
+          "continuation"),
+    299: ("Telecom Italia S.p.A.", [(20221167, "2009:RYC", "Ordinary Shares"),
+                                    (65931182, "6795:NYB", "Saving Shares")],
+          "1 old / 2 new trading items (Old Ordinary Shares 3486:VYB, last price 1.014 on 2003-08-01): no linkage, "
+          "reverse merger between Telecom Italia and parent Olivetti S.p.A. in 2003, Olivetti issuing new Ordinary "
+          "(2.245) and Saving (1.483) shares to former Telecom Italia/Olivetti holders, price and share count not "
+          "consistent between old and new (not a clean ratio)"),
+    351: ("Wilh. Wilhelmsen Holding ASA", [(108503363, "3396:MAM", "Class B Shares")],
+          "1 old / 1 new trading items (Class A Shares 3211:TYJ): no linkage, Class A and Class B are two "
+          "permanent share classes both fully listed since 1992, company only sporadically in AUC (12 of 98 "
+          "reviews, with ~7y and ~6.75y gaps), not a corporate event"),
+    342: ("Warner Bros. Discovery Inc.", [(49031559, "7378:NOD", "Series A Common Stock"),
+                                           (49031561, "6251:CEV", "Series C Common Stock")],
+          "1 old / 2 new trading items (Old Series A Common Stock 7483:SIM, last price 18.30 on 2008-09-17): no "
+          "linkage, Discovery Holding Company restructured into Discovery Communications on 2008-09-18, each old "
+          "share converted into 0.5 new Series A + 0.5 new Series C share (SEC S-4 confirmed), non-1:1 ratio"),
 }
 DECISION_COLUMNS =["group", "company", "decision", "assetid", "tradingitemid", "security", "Link",
                     "share", "price", "Date", "comment", "decided_on"]

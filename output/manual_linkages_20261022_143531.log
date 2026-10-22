@@ -1,0 +1,68 @@
+2026-10-22 14:35:31,163 - INFO - === Starting Manual Linkages ===
+2026-10-22 14:35:31,191 - INFO - group 232 Old Mutual Limited: removed 1247:WOG -> 6441:MUT price 29.4 on 2018-06-26 (Old Mutual return linkage 1247:WOG (London GBP) -> 6441:MUT (Johannesburg ZAR) on 2018-06-26, not validated with the circular linkage of group 233)
+2026-10-22 14:35:31,192 - INFO - DocLinkage: 333 rows in /Users/rudydhekaier/PycharmProjects/check-linkage/output/Historical_DocLinkage_new.xlsx
+2026-10-22 14:35:31,192 - INFO - group 26 American Tower Corporation: added 3928:FOR -> 1208:VEP share 392 price 32.61 on 2008-11-03 (circular, return linkage on 2012-01-04)
+2026-10-22 14:35:31,193 - INFO - group 40 AusNet Pty Ltd: added 1269:HYB -> 3888:HAS share 2092.68 price 1.08 on 2008-11-03 (circular, return linkage on 2015-06-09)
+2026-10-22 14:35:31,193 - INFO - group 46 Bank of Ireland Group plc: added 7410:WEV -> 1329:QAS share 33.474 price 63 on 2008-11-03 (circular, return linkage on 2017-07-10)
+2026-10-22 14:35:31,194 - INFO - group 50 Beazley plc: added 1534:SUP -> 6540:QIP share 355.8 price 1.06 on 2008-11-03 (circular, return linkages on 2009-06-09 and 2016-04-14)
+2026-10-22 14:35:31,194 - INFO - group 85 Cape plc: added 1422:JYM -> 5568:BUJ share 113.838 price 0.703 on 2008-11-03 (circular, return linkage on 2011-06-27; AIM line vs Main Market line, prices differ slightly (0.7075 vs 0.7025 on 2008-11-03), accepted)
+2026-10-22 14:35:31,194 - INFO - group 199 Man Group Plc: added 1380:CEF -> 4561:TEM share 1715.269 price 3.608 on 2008-11-03 (circular, no return linkage: 4561:TEM priced until 2012-11-09, Man Group absent for 5 reviews, back with 1380:CEF on 2014-06-20; accepted)
+2026-10-22 14:35:31,195 - INFO - group 290 Swiss Re AG: added 6325:WAB -> 5431:JYJ share 332.648 price 49.16 on 2008-12-19 (circular, linkage at the AUC switch (6325:WAB last in AUC 2008-12-18 at 48.68); no return linkage: both lines in AUC on 2011-09-16 and 2011-12-16 (overlap); accepted)
+2026-10-22 14:35:31,195 - INFO - group 91 Centamin Limited: added 3953:NEG -> 7339:QUQ share 879.019 price 0.29 on 2008-11-03 (circular, return linkage on 2011-12-30)
+2026-10-22 14:35:31,196 - INFO - group 98 Coast Entertainment Holdings Limited: added 3972:PAV -> 1542:VIQ share 236.632 price 1.25 on 2008-11-03 (circular, return linkage on 2018-11-30)
+2026-10-22 14:35:31,196 - INFO - group 203 Mebuki Financial GroupInc.: added 4522:PIS -> 2701:VYT share 917.403 price 411.966 on 2008-11-03 (circular, return linkage on 2016-10-03)
+2026-10-22 14:35:31,196 - INFO - group 56 Biglari Holdings Inc.: added 6196:BAN -> 5371:PYR share 2.068 price 242.69 on 2018-05-01 (correct linkage, 1553:TYQ Class A is a new security (no linkage))
+2026-10-22 14:35:31,197 - INFO - group 143 Fidelity National Financial Inc.: added 1094:QIW -> 2291:FYR share 276 price 32.76 on 2014-06-30 (correct linkage, 3806:KIF FNFV is a new security (no linkage))
+2026-10-22 14:35:31,197 - INFO - group 157 H. Lundbeck A/S: added 1119:MAK -> 3414:HIW share 794.272 price 32.5 on 2022-06-10 (correct linkage, 6922:SIK A Shares is a new security (no linkage))
+2026-10-22 14:35:31,197 - INFO - DocLinkage: 13 manual linkages appended at row 336
+2026-10-22 14:35:31,211 - INFO - group 19 Alphabet Inc.: no linkage decided, not in Problems (2 old / 2 new trading items (Old Class A 5093:DOB, Old Class C 3723:KAH, last price 2015-10-05): no linkage)
+2026-10-22 14:35:31,211 - INFO - group 26 American Tower Corporation: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 40 AusNet Pty Ltd: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 46 Bank of Ireland Group plc: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 50 Beazley plc: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 56 Biglari Holdings Inc.: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 85 Cape plc: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 91 Centamin Limited: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 98 Coast Entertainment Holdings Limited: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 129 Esprit Energy Trust: no linkage decided, not in Problems (2 old / 1 new trading items (Class A 5761:MYL, Class B 1018:KUT merged into Trust Units on 2005-07-05): not validated because of a price adjustment factor (Common Shares 7149:VOQ exchanged ~4 for 1 trust unit + ProspEx shares on 2004-10-05, 4.03 -> ~13, not adjusted in CIQ))
+2026-10-22 14:35:31,211 - INFO - group 143 Fidelity National Financial Inc.: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 157 H. Lundbeck A/S: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,211 - INFO - group 189 Liberty Global Ltd.: no linkage decided, not in Problems (2 old / 2 new trading items (Old Series A 1615:COJ, Old Series C 3163:SOD, last price 2013-06-07): no linkage, 1:1 share exchange Liberty Global Inc -> Liberty Global plc following Virgin Media acquisition but price and share count different)
+2026-10-22 14:35:31,211 - INFO - group 193 Lionsgate Studios Corp.: no linkage decided, not in Problems (2 old / 1 new trading items (Class A Voting 4271:VYN, Class B Non-Voting 4538:PEJ, last price 2025-05-06): no linkage, Class A and Class B merged into Common Shares on 2025-05-06, non 1:1 ratio)
+2026-10-22 14:35:31,211 - INFO - group 194 Lionsgate Studios Corp.: no linkage decided, not in Problems (1 old / 2 new trading items (Old Common Shares 3138:MOG, last price 2016-12-08): no linkage, split into Class A Voting and Class B Non-Voting Shares on 2016-12-09, non 1:1 ratio)
+2026-10-22 14:35:31,211 - INFO - group 199 Man Group Plc: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,212 - INFO - group 203 Mebuki Financial GroupInc.: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,212 - INFO - group 204 Mediclinic Group Limited: no linkage decided, not in Problems (1 old / 1 new trading items (Old Ordinary Shares 1404:PYF, Johannesburg ZAR, last price 2016-02-05): no linkage, merger with Al Noor Hospitals creating Mediclinic International plc, listed in London GBP from 2016-02-16 after a trading halt, currency change and non 1:1 share exchange ratio)
+2026-10-22 14:35:31,212 - INFO - group 230 Odfjell SE: no linkage decided, not in Problems (1 old / 1 new trading items (Series B Shares 7195:FAB): no linkage, Series A and Series B are two permanent share classes both fully listed since 1992, overlapping in AUC (both present 2005-03-18 and 2005-06-17), AUC just alternates which one is the main line)
+2026-10-22 14:35:31,212 - INFO - group 233 Old Mutual Limited: circular linkage not validated, not in Problems (Different exchanges and currencies: 6441:MUT Johannesburg ZAR (8.54 on 2008-12-18) vs 1247:WOG London GBP (0.575 on 2008-12-19); return linkage on 2018-06-26 (GBP -> ZAR))
+2026-10-22 14:35:31,212 - INFO - group 240 Paramount Skydance Corporation: no linkage decided, not in Problems (2 old / 1 new trading items (Old Class A 6685:TYP, Old Class B 2719:LYV, last price 2025-08-06): no linkage, consolidation into new Class B Common Stock (Skydance Corp.) following Skydance's acquisition of Paramount Global, non-uniform ratio (Class A 1.5:1, Class B 1:1), no overlap in AUC between 2025-06-20 and 2025-09-19 reviews)
+2026-10-22 14:35:31,212 - INFO - group 241 Paramount Skydance Corporation: no linkage decided, not in Problems (2 old / 2 new trading items (Former Viacom Class B 3442:HAM, Former Viacom Class A 2776:SIP): no linkage, Old Viacom split into CBS Corporation (this companyid) and New Viacom Inc. (companyid 25403751) on 2006-01-03, non-uniform share ratio (0.47 for B, 0.50 for A), no overlap in AUC between 2005-12-16 and 2006-03-17 reviews)
+2026-10-22 14:35:31,214 - INFO - group 287 SunPower Corporation: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-22 14:35:31,215 - INFO - group 288 Sunshine Lake Pharma Co. Ltd.: 2 trading items in Problems (gap of 7 business days between last common price 2025-07-29 00:00:00 and new price)
+2026-10-22 14:35:31,215 - INFO - group 290 Swiss Re AG: solved by a manual linkage, not in Problems
+2026-10-22 14:35:31,216 - INFO - group 299 Telecom Italia S.p.A.: 3 trading items in Problems (1 old / 2 new trading items)
+2026-10-22 14:35:31,216 - INFO - group 334 WCT Holdings Berhad: circular linkage not validated, not in Problems (WCT in AUC only for 3 reviews (2008-03-21, 2008-09-19 on 6109:HAJ, 2008-12-19 on 6327:BYK) and never comes back; prices differ at 6th decimal)
+2026-10-22 14:35:31,216 - INFO - group 341 Warner Bros. Discovery Inc.: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-22 14:35:31,217 - INFO - group 342 Warner Bros. Discovery Inc.: 3 trading items in Problems (1 old / 2 new trading items)
+2026-10-22 14:35:31,217 - INFO - group 351 Wilh. Wilhelmsen Holding ASA: 2 trading items in Problems (no price for new trading item after last common price in window)
+2026-10-22 14:35:31,220 - INFO - Problems: 10/25 notes of /Users/rudydhekaier/PycharmProjects/check-linkage/problem_notes.csv used
+2026-10-22 14:35:31,220 - WARNING - note not used, Esprit Energy Trust 5761:MYL -> 7133:CAR not in Problems
+2026-10-22 14:35:31,220 - WARNING - note not used, Esprit Energy Trust 1018:KUT -> 7133:CAR not in Problems
+2026-10-22 14:35:31,220 - WARNING - note not used, Liberty Global Ltd. 1615:COJ -> 1899:QIC not in Problems
+2026-10-22 14:35:31,220 - WARNING - note not used, Liberty Global Ltd. 6924:NYS -> 4547:MIH not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Liberty Global Ltd. 3163:SOD -> 4888:GIK not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Lionsgate Studios Corp. 4271:VYN -> 6501:LUN not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Lionsgate Studios Corp. 4538:PEJ -> 6501:LUN not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Lionsgate Studios Corp. 3138:MOG -> 4271:VYN not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Lionsgate Studios Corp. 3138:MOG -> 4538:PEJ not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Mediclinic Group Limited 1404:PYF -> 4650:POQ not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Odfjell SE 7195:FAB -> 1367:QIR not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Paramount Skydance Corporation 6685:TYP -> 4450:RAB not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Paramount Skydance Corporation 2719:LYV -> 4450:RAB not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Paramount Skydance Corporation 2776:SIP -> 6685:TYP not in Problems
+2026-10-22 14:35:31,221 - WARNING - note not used, Paramount Skydance Corporation 3442:HAM -> 2719:LYV not in Problems
+2026-10-22 14:35:31,247 - INFO - group 56 Biglari Holdings Inc.: 1553:TYQ Class A common stock is a new security, no linkage
+2026-10-22 14:35:31,247 - INFO - group 143 Fidelity National Financial Inc.: 3806:KIF FNFV Group Common Stock is a new security, no linkage
+2026-10-22 14:35:31,247 - INFO - group 157 H. Lundbeck A/S: 6922:SIK A Shares is a new security, no linkage
+2026-10-22 14:35:31,307 - INFO - /Users/rudydhekaier/PycharmProjects/check-linkage/output/Historical_DocLinkage_v2.xlsx: DocLinkage 346 rows (13 manual), Problems 16 rows in 6 groups, Decisions 32 rows
+2026-10-22 14:35:31,307 - INFO - === Manual Linkages Completed ===
