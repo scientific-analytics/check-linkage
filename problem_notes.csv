@@ -1,0 +1,26 @@
+assetid,Link,company,review,note
+5761:MYL,7133:CAR,Esprit Energy Trust,,Merged classes A n B into Trust on 2005-07-05 - Both in AUC before merge
+1018:KUT,7133:CAR,Esprit Energy Trust,,Merged classes A n B into Trust on 2005-07-05 - Both in AUC before merge
+1615:COJ,1899:QIC,Liberty Global Ltd.,"Not OK, price different, shares different","Has listed Class A , B and C shares following acquisition of Virgin media and 1:1 share exchange from Liberty global Inc to Liberty Global plc"
+6924:NYS,4547:MIH,Liberty Global Ltd.,Not the same price,"Has listed Class A , B and C shares (and no price on 7 June so first day is 10) following acquisition of Virgin media and 1:1 share exchange from Liberty global Inc to Liberty Global plc"
+3163:SOD,4888:GIK,Liberty Global Ltd.,"Not OK, price different, shares different","Has listed Class A , B and C shares following acquisition of Virgin media and 1:1 share exchange from Liberty global Inc to Liberty Global plc"
+4271:VYN,6501:LUN,Lionsgate Studios Corp.,,Merged classes A n B into Common Shares on 2025-05-06 - Both in AUC before merge
+4538:PEJ,6501:LUN,Lionsgate Studios Corp.,,Merged classes A n B into Common Shares on 2025-05-06 - Both in AUC before merge
+3138:MOG,4271:VYN,Lionsgate Studios Corp.,??,Split into class A and Class B shares on 2016-12-09 - Both in AUC after split
+3138:MOG,4538:PEJ,Lionsgate Studios Corp.,??,Split into class A and Class B shares on 2016-12-09 - Both in AUC after split
+1404:PYF,4650:POQ,Mediclinic Group Limited,,Trading suspended for listing change due to merger during 2016-02-05 to 2016-02-16
+7195:FAB,1367:QIR,Odfjell SE,,"Two classes of shares, both fully listed over entire timeframe. No need for linkage. Some overlap between the two in AUC too."
+6685:TYP,4450:RAB,Paramount Skydance Corporation,,"Named only "" Skydance Corporation"" in CIQ!!! A shares were delisted following Paramount Global acq by Skydance : consolidation into new B shares (1.5:1) - Both in AUC before merge"
+2719:LYV,4450:RAB,Paramount Skydance Corporation,,"Named only "" Skydance Corporation"" in CIQ!!! New B shares after A shares were delisted following Paramount Global acq by Skydance (1:1) - Both in AUC before merge"
+2776:SIP,6685:TYP,Paramount Skydance Corporation,,"Named only "" Skydance Corporation"" in CIQ!!! 2 old / 2 new (classes A and B, constant over time): Old Viacom Class A becomes CBS Class A on 2006-01-03 when New Viacom is spun off. This companyid follows CBS (legal successor of Old Viacom -> ViacomCBS -> Paramount Global)"
+3442:HAM,2719:LYV,Paramount Skydance Corporation,,"Named only "" Skydance Corporation"" in CIQ!!! 2 old / 2 new (classes A and B, constant over time): Old Viacom Class B becomes CBS Class B on 2006-01-03 when New Viacom is spun off. This companyid follows CBS (legal successor of Old Viacom -> ViacomCBS -> Paramount Global)"
+7965:KUG,7045:MEM,SunPower Corporation,,Merged classes A n B into Common Stock on 2011-11-17 - Both in AUC before
+3897:BOD,7045:MEM,SunPower Corporation,,Merged classes A n B into Common Stock on 2011-11-17 - Both in AUC before
+3095:BEG,2966:WUC,Sunshine Lake Pharma Co. Ltd.,,Trading suspended for listing change due to absorption between 2025-07-29 n 2025-08-07
+3486:VYB,2009:RYC,Telecom Italia S.p.A.,Not the same price and shares,"This is Olivetti S.p.A issuing new shares for the previous owners of Telecom Italia or Olivetti after the reverse merger between Telecom Italia and its parent company, Olivetti S.p.A - Both in AUC"
+3486:VYB,6795:NYB,Telecom Italia S.p.A.,Not the same price and shares,"This is Olivetti S.p.A issuing Savings shares for the owners fo such savings shares in Telecom Italia after the reverse merger between Telecom Italia and its parent company, Olivetti S.p.A. To delete ? We are mapping the old Olivetti to the new savings shares... - Both in AUC"
+7378:NOD,7463:MON,Warner Bros. Discovery Inc.,,Merged classes A n C into New Ordinary Shares on 2022-04-08 - Both in AUC before
+6251:CEV,7463:MON,Warner Bros. Discovery Inc.,,Merged classes A n C into New Ordinary Shares on 2022-04-08 - Both in AUC before
+7483:SIM,7378:NOD,Warner Bros. Discovery Inc.,Not the same price and shares,Split A shares into class A and Class C shares following restructure from Discovery Holding Company to Discovery Communications on 2008-09-18 - Both in AUC
+7483:SIM,6251:CEV,Warner Bros. Discovery Inc.,Not the same price and shares,Split A shares into class A and Class C shares following restructure from Discovery Holding Company to Discovery Communications on 2008-09-18 - Both in AUC
+3211:TYJ,3396:MAM,Wilh. Wilhelmsen Holding ASA,,"Two classes of shares, both fully listed over entire timeframe. No need for linkage. Weird AUC presence"

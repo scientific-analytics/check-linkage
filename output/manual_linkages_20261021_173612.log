@@ -1,0 +1,53 @@
+2026-10-21 17:36:12,051 - INFO - === Starting Manual Linkages ===
+2026-10-21 17:36:12,080 - INFO - DocLinkage: 334 rows in /home/rudy/PycharmProjects/check linkage/output/Historical_DocLinkage_new.xlsx
+2026-10-21 17:36:12,081 - INFO - group 26 American Tower Corporation: added 3928:FOR -> 1208:VEP share 392 price 32.61 on 2008-11-03 (circular, return linkage on 2012-01-04)
+2026-10-21 17:36:12,082 - INFO - group 40 AusNet Pty Ltd: added 1269:HYB -> 3888:HAS share 2092.68 price 1.08 on 2008-11-03 (circular, return linkage on 2015-06-09)
+2026-10-21 17:36:12,082 - INFO - group 46 Bank of Ireland Group plc: added 7410:WEV -> 1329:QAS share 33.474 price 63 on 2008-11-03 (circular, return linkage on 2017-07-10)
+2026-10-21 17:36:12,083 - INFO - group 50 Beazley plc: added 1534:SUP -> 6540:QIP share 355.8 price 1.06 on 2008-11-03 (circular, return linkages on 2009-06-09 and 2016-04-14)
+2026-10-21 17:36:12,084 - INFO - group 85 Cape plc: added 1422:JYM -> 5568:BUJ share 113.838 price 0.703 on 2008-11-03 (circular, return linkage on 2011-06-27; AIM line vs Main Market line, prices differ slightly (0.7075 vs 0.7025 on 2008-11-03), accepted)
+2026-10-21 17:36:12,084 - INFO - group 199 Man Group Plc: added 1380:CEF -> 4561:TEM share 1715.269 price 3.608 on 2008-11-03 (circular, no return linkage: 4561:TEM priced until 2012-11-09, Man Group absent for 5 reviews, back with 1380:CEF on 2014-06-20; accepted)
+2026-10-21 17:36:12,085 - INFO - group 233 Old Mutual Limited: added 6441:MUT -> 1247:WOG share 4407.094 price 0.661 on 2008-11-03 (circular, return linkage on 2018-06-26; price ratio ~15.6 between the two lines (probably different currencies), accepted)
+2026-10-21 17:36:12,086 - INFO - group 290 Swiss Re AG: added 6325:WAB -> 5431:JYJ share 332.648 price 49.16 on 2008-12-19 (circular, linkage at the AUC switch (6325:WAB last in AUC 2008-12-18 at 48.68); no return linkage: both lines in AUC on 2011-09-16 and 2011-12-16 (overlap); accepted)
+2026-10-21 17:36:12,086 - INFO - group 334 WCT Holdings Berhad: added 6109:HAJ -> 6327:BYK share 884.246 price 1.209 on 2008-11-03 (circular, WCT in AUC only for 3 reviews and never comes back; prices differ at 6th decimal, accepted)
+2026-10-21 17:36:12,087 - INFO - group 91 Centamin Limited: added 3953:NEG -> 7339:QUQ share 879.019 price 0.29 on 2008-11-03 (circular, return linkage on 2011-12-30)
+2026-10-21 17:36:12,088 - INFO - group 98 Coast Entertainment Holdings Limited: added 3972:PAV -> 1542:VIQ share 236.632 price 1.25 on 2008-11-03 (circular, return linkage on 2018-11-30)
+2026-10-21 17:36:12,088 - INFO - group 203 Mebuki Financial GroupInc.: added 4522:PIS -> 2701:VYT share 917.403 price 411.966 on 2008-11-03 (circular, return linkage on 2016-10-03)
+2026-10-21 17:36:12,089 - INFO - group 56 Biglari Holdings Inc.: added 6196:BAN -> 5371:PYR share 2.068 price 242.69 on 2018-05-01 (correct linkage, 1553:TYQ Class A is a new security (no linkage))
+2026-10-21 17:36:12,090 - INFO - group 143 Fidelity National Financial Inc.: added 1094:QIW -> 2291:FYR share 276 price 32.76 on 2014-06-30 (correct linkage, 3806:KIF FNFV is a new security (no linkage))
+2026-10-21 17:36:12,090 - INFO - group 157 H. Lundbeck A/S: added 1119:MAK -> 3414:HIW share 794.272 price 32.5 on 2022-06-10 (correct linkage, 6922:SIK A Shares is a new security (no linkage))
+2026-10-21 17:36:12,090 - INFO - DocLinkage: 15 manual linkages appended at row 337
+2026-10-21 17:36:12,098 - INFO - group 19 Alphabet Inc.: no linkage decided, not in Problems (2 old / 2 new trading items (Old Class A 5093:DOB, Old Class C 3723:KAH, last price 2015-10-05): no linkage)
+2026-10-21 17:36:12,098 - INFO - group 26 American Tower Corporation: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 40 AusNet Pty Ltd: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 46 Bank of Ireland Group plc: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 50 Beazley plc: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 56 Biglari Holdings Inc.: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 85 Cape plc: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 91 Centamin Limited: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,098 - INFO - group 98 Coast Entertainment Holdings Limited: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,100 - INFO - group 129 Esprit Energy Trust: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-21 17:36:12,100 - INFO - group 143 Fidelity National Financial Inc.: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,100 - INFO - group 157 H. Lundbeck A/S: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,102 - INFO - group 189 Liberty Global Ltd.: 4 trading items in Problems (2 old / 2 new trading items)
+2026-10-21 17:36:12,104 - INFO - group 193 Lionsgate Studios Corp.: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-21 17:36:12,105 - INFO - group 194 Lionsgate Studios Corp.: 3 trading items in Problems (1 old / 2 new trading items)
+2026-10-21 17:36:12,106 - INFO - group 199 Man Group Plc: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,106 - INFO - group 203 Mebuki Financial GroupInc.: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,107 - INFO - group 204 Mediclinic Group Limited: 2 trading items in Problems (gap of 7 business days between last common price 2016-02-05 00:00:00 and new price)
+2026-10-21 17:36:12,109 - INFO - group 230 Odfjell SE: 2 trading items in Problems (no price for new trading item after last common price in window)
+2026-10-21 17:36:12,109 - INFO - group 233 Old Mutual Limited: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,110 - INFO - group 240 Paramount Skydance Corporation: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-21 17:36:12,112 - INFO - group 241 Paramount Skydance Corporation: 4 trading items in Problems (2 old / 2 new trading items)
+2026-10-21 17:36:12,114 - INFO - group 287 SunPower Corporation: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-21 17:36:12,115 - INFO - group 288 Sunshine Lake Pharma Co. Ltd.: 2 trading items in Problems (gap of 7 business days between last common price 2025-07-29 00:00:00 and new price)
+2026-10-21 17:36:12,115 - INFO - group 290 Swiss Re AG: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,117 - INFO - group 299 Telecom Italia S.p.A.: 3 trading items in Problems (1 old / 2 new trading items)
+2026-10-21 17:36:12,117 - INFO - group 334 WCT Holdings Berhad: solved by a manual linkage, not in Problems
+2026-10-21 17:36:12,118 - INFO - group 341 Warner Bros. Discovery Inc.: 3 trading items in Problems (2 old / 1 new trading items)
+2026-10-21 17:36:12,120 - INFO - group 342 Warner Bros. Discovery Inc.: 3 trading items in Problems (1 old / 2 new trading items)
+2026-10-21 17:36:12,121 - INFO - group 351 Wilh. Wilhelmsen Holding ASA: 2 trading items in Problems (no price for new trading item after last common price in window)
+2026-10-21 17:36:12,179 - INFO - group 56 Biglari Holdings Inc.: 1553:TYQ Class A common stock is a new security, no linkage
+2026-10-21 17:36:12,179 - INFO - group 143 Fidelity National Financial Inc.: 3806:KIF FNFV Group Common Stock is a new security, no linkage
+2026-10-21 17:36:12,179 - INFO - group 157 H. Lundbeck A/S: 6922:SIK A Shares is a new security, no linkage
+2026-10-21 17:36:12,249 - INFO - /home/rudy/PycharmProjects/check linkage/output/Historical_DocLinkage_v2.xlsx: DocLinkage 349 rows (15 manual), Problems 40 rows in 14 groups, Decisions 20 rows
+2026-10-21 17:36:12,249 - INFO - === Manual Linkages Completed ===
