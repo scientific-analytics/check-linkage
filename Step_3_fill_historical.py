@@ -18,7 +18,7 @@ import pandas as pd
 
 from Step_2_build_linkage import BASE_DIR, OUTPUT_DIR, load_inputs
 
-HISTORICAL_FILE = os.path.join(BASE_DIR, "Historical_DocLinkage.xlsx")
+HISTORICAL_FILE = os.path.join(BASE_DIR, "input", "Historical_DocLinkage.xlsx")
 NEW_HISTORICAL_FILE = os.path.join(OUTPUT_DIR, "Historical_DocLinkage_new.xlsx")
 LINKAGES_DIR = os.path.join(OUTPUT_DIR, "linkages")
 PROBLEMS_DIR = os.path.join(OUTPUT_DIR, "problems")

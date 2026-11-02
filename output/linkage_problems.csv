@@ -1,31 +1,129 @@
 group,company,rows,reason
+15,Aker BP ASA,"15.1, 15.2","price jump of -32.4%: old 51 on 2009-12-21, new 34.5 on 2009-12-22"
+16,Alamos Gold Inc.,"16.1, 16.2","price jump of +95.3%: old 3.58 on 2015-07-03, new 6.99 on 2015-07-06"
 19,Alphabet Inc.,"19.1, 19.2, 19.3, 19.4",2 old / 2 new trading items
+24,American Airlines Group Inc.,"24.1, 24.2","price jump of +116.0%: old 11.39 on 2013-12-06, new 24.6 on 2013-12-09"
 26,American Tower Corporation,"26.1, 26.2",no price for new trading item after last common price in window
+27,Americanas S.A.,"27.1, 27.2","price jump of +9005.9%: old 68 on 2021-07-16, new 6192 on 2021-07-19"
+29,AngloGold Ashanti plc,"29.1, 29.2","price jump of -95.2%: old 343.05 on 2023-09-26, new 16.62 on 2023-09-27"
+35,ArcelorMittal S.A.,"35.1, 35.2","price jump of +203.6%: old 48.45 on 2007-11-12, new 147.09 on 2007-11-13"
+36,Archrock Inc.,"36.1, 36.2","price jump of +209.2%: old 25.39 on 2007-08-20, new 78.5 on 2007-08-21"
 40,AusNet Pty Ltd,"40.1, 40.2",no price for new trading item after last common price in window
+44,Banco do Brasil S.A.,"44.1, 44.2","price jump of +17026.5%: old 0.01051 on 2002-09-09, new 1.8 on 2002-09-10"
 46,Bank of Ireland Group plc,"46.1, 46.2",no price for new trading item after last common price in window
 50,Beazley plc,"50.1, 50.2",no price for new trading item after last common price in window
 56,Biglari Holdings Inc.,"56.1, 56.2, 56.3",1 old / 2 new trading items
+70,Brookfield Renewable Corporation,"70.1, 70.2","price jump of -31.0%: old 40.67 on 2024-12-27, new 28.07 on 2024-12-30"
+71,Brookfield Renewable Partners L.P.,"71.1, 71.2","price jump of -47.1%: old 25.5 on 2011-11-29, new 13.4933 on 2011-11-30"
+72,C&J Energy Services Inc.,"72.1, 72.2","price jump of +12512.9%: old 0.31 on 2017-01-05, new 39.1 on 2017-01-12"
+75,CIT Group Inc.,"75.1, 75.2","price jump of +64322.2%: old 0.045 on 2009-12-09, new 28.99 on 2009-12-10"
+77,CML HealthCare Inc.,"77.1, 77.2","price jump of -79.3%: old 58.8 on 2004-02-24, new 12.15 on 2004-02-25"
+79,CPN Retail Growth Leasehold REIT,"79.1, 79.2",no linkage: gap of 20 days between old last price on 2017-11-24 and new first price 22.8 on 2017-12-14
+80,CTO Realty Growth Inc.,"80.1, 80.2","price jump of -65.1%: old 43.43 on 2021-02-01, new 15.15 on 2021-02-02"
 85,Cape plc,"85.1, 85.2",no price for new trading item after last common price in window
+89,Cardiac Science Corporation,"89.1, 89.2","price jump of +42.9%: old 8.22 on 2005-08-31, new 11.75 on 2005-09-01"
 91,Centamin Limited,"91.1, 91.2",no price for new trading item after last common price in window
 98,Coast Entertainment Holdings Limited,"98.1, 98.2",no price for new trading item after last common price in window
+99,Coca-Cola Europacific Partners PLC,"99.1, 99.2","price jump of -32.1%: old 51.55 on 2016-05-27, new 35 on 2016-05-31"
+103,Compagnie FinanciÃ¨re Richemont SA,"103.1, 103.2","price jump of +20.7%: old 21.45 on 2008-10-20, new 25.9 on 2008-10-21"
+106,Contrans Group Inc.,"106.1, 106.2","price jump of -75.6%: old 39.1 on 2002-07-22, new 9.55 on 2002-07-23"
+107,Core Scientific Inc.,"107.1, 107.2","price jump of +286.5%: old 0.89 on 2024-01-23, new 3.44 on 2024-01-24"
+108,CorePoint Lodging Inc.,"108.1, 108.2","price jump of -35.5%: old 43.24 on 2018-05-30, new 27.89 on 2018-05-31"
+109,Crane Company,"109.1, 109.2","price jump of -31.0%: old 114.42 on 2023-04-03, new 79 on 2023-04-04"
+112,Currys plc,"112.1, 112.2","price jump of -27.6%: old 1.905 on 2010-03-23, new 1.38 on 2010-03-24"
+115,Dawson Geophysical Company,"115.1, 115.2","price jump of -31.9%: old 10.23 on 2015-02-11, new 6.9619 on 2015-02-12"
+116,Dell Technologies Inc.,"116.1, 116.2","price jump of -43.2%: old 80 on 2018-12-27, new 45.43 on 2018-12-28"
+117,Delta Air Lines Inc.,"117.1, 117.2","price jump of +17430.8%: old 0.13 on 2007-04-25, new 22.79 on 2007-04-26"
+119,DigitalBridge Group Inc.,"119.1, 119.2","price jump of +168.4%: old 21.52 on 2017-01-10, new 57.76 on 2017-01-11"
+120,Dime Community Bancshares Inc.,"120.1, 120.2","price jump of +59.8%: old 15.9 on 2021-01-29, new 25.41 on 2021-02-01"
+121,DuPont de Nemours Inc.,"121.1, 121.2","price jump of +807.2%: old 66.65 on 2017-08-31, new 604.626 on 2017-09-01"
+122,Duke Energy Corporation,"122.1, 122.2","price jump of +197.1%: old 29.15 on 2006-03-31, new 86.61 on 2006-04-03"
+123,ENNOSTAR Inc.,"123.1, 123.2","price jump of +119.8%: old 41.4 on 2020-12-23, new 91 on 2021-01-06"
+125,Energy Transfer Operating L.P.,"125.1, 125.2","price jump of -34.8%: old 35.93 on 2017-04-27, new 23.42 on 2017-05-01"
 129,Esprit Energy Trust,"129.1, 129.2, 129.3",2 old / 1 new trading items
+132,Experian plc,"132.1, 132.2","price jump of -42.0%: old 9.9 on 2006-10-06, new 5.74 on 2006-10-11"
+134,Extendicare Inc.,"134.1, 134.2","price jump of -35.5%: old 23.65 on 2006-11-09, new 15.25 on 2006-11-10"
+140,Ferrovial N.V.,"140.1, 140.2","price jump of -73.8%: old 30.83 on 2009-12-04, new 8.09 on 2009-12-07"
 143,Fidelity National Financial Inc.,"143.1, 143.2, 143.3",1 old / 2 new trading items
 157,H. Lundbeck A/S,"157.1, 157.2, 157.3",1 old / 2 new trading items
+162,Hertz Global Holdings Inc.,"162.1, 162.2","price jump of +208.8%: old 8.74 on 2021-06-30, new 26.99 on 2021-07-01"
+164,HighPoint Resources Corporation,"164.1, 164.2","price jump of +5261.6%: old 4.84 on 2018-03-19, new 259.5 on 2018-03-20"
+166,Hulic Co. Ltd.,"166.1, 166.2","price jump of -67.7%: old 1283 on 2012-06-26, new 415 on 2012-06-27"
+169,Inseego Corp.,"169.1, 169.2","price jump of +904.3%: old 2.3 on 2016-11-30, new 23.1 on 2016-12-01"
+171,Intercontinental Exchange Inc.,"171.1, 171.2","price jump of -79.8%: old 197.8 on 2013-11-12, new 39.968 on 2013-11-13"
+173,Invesco Ltd.,"173.1, 173.2","price jump of +118.9%: old 12.56 on 2007-12-03, new 27.5 on 2007-12-04"
+174,Investors Bancorp Inc.,"174.1, 174.2","price jump of -61.2%: old 26.83 on 2014-05-07, new 10.42 on 2014-05-08"
+176,Jelmoli Holding Ltd.,"176.1, 176.2","price jump of -86.3%: old 2390 on 2009-03-27, new 327.5 on 2009-03-30"
+180,Keyera Corp.,"180.1, 180.2","price jump of -50.9%: old 36.48 on 2011-01-17, new 17.9 on 2011-01-18"
+185,LANXESS Solutions US Inc.,"185.1, 185.2","price jump of +4900.0%: old 0.31 on 2010-11-09, new 15.5 on 2010-11-10"
+188,LegacyTexas Financial Group Inc.,"188.1, 188.2","price jump of -29.1%: old 13.39 on 2010-07-06, new 9.5 on 2010-07-07"
 189,Liberty Global Ltd.,"189.1, 189.2, 189.3, 189.4",2 old / 2 new trading items
+190,Liberty Starz Group (Business Unit),"190.1, 190.2","price jump of +39.9%: old 35.91 on 2009-11-19, new 50.25 on 2009-11-20"
 193,Lionsgate Studios Corp.,"193.1, 193.2, 193.3",2 old / 1 new trading items
 194,Lionsgate Studios Corp.,"194.1, 194.2, 194.3",1 old / 2 new trading items
+195,Lithium Argentina AG,"195.1, 195.2","price jump of -61.9%: old 22.19 on 2023-10-03, new 8.46 on 2023-10-04"
 199,Man Group Plc,"199.1, 199.2",no price for new trading item in window
+201,Match Group Inc.,"201.1, 201.2","price jump of -29.5%: old 149.833 on 2020-06-30, new 105.67 on 2020-07-01"
 203,Mebuki Financial GroupInc.,"203.1, 203.2",no price for new trading item after last common price in window
 204,Mediclinic Group Limited,"204.1, 204.2",gap of 7 business days between last common price 2016-02-05 00:00:00 and new price
+206,Melrose Industries PLC,"206.1, 206.2","price jump of +2203.8%: old 2.778 on 2015-11-18, new 64 on 2015-11-19"
+210,NEX Group Limited,"210.1, 210.2","price jump of +78.1%: old 4.697 on 2016-12-14, new 8.365 on 2016-12-15"
+213,Neles Oyj,"213.1, 213.2","price jump of -69.5%: old 29.17 on 2020-06-30, new 8.91 on 2020-07-01"
+221,Northfield Bancorp Inc.,"221.1, 221.2","price jump of -26.8%: old 15.64 on 2013-01-24, new 11.45 on 2013-01-25"
+223,Northrop Grumman Innovation Systems LLC,"223.1, 223.2","price jump of -55.9%: old 140.03 on 2015-02-09, new 61.81 on 2015-02-10"
+226,Nutrien Ltd.,"226.1, 226.2","price jump of +167.6%: old 25.78 on 2017-12-29, new 69 on 2018-01-02"
+228,Obsidian Energy Ltd.,"228.1, 228.2","price jump of +619.4%: old 23.84 on 2010-12-31, new 171.5 on 2011-01-04"
+229,Obsidian Energy Ltd.,"229.1, 229.2","price jump of -66.3%: old 86 on 2005-06-01, new 29 on 2005-06-02"
 230,Odfjell SE,"230.1, 230.2",no price for new trading item after last common price in window
+232,Old Mutual Limited,"232.1, 232.2","price jump of +1294.0%: old 2.109 on 2018-06-25, new 29.4 on 2018-06-26"
 233,Old Mutual Limited,"233.1, 233.2",no price for new trading item after last common price in window
+234,Onto Innovation Inc.,"234.1, 234.2","price jump of +22.5%: old 28.5 on 2019-10-25, new 34.92 on 2019-10-28"
+235,Owens Corning,"235.1, 235.2","price jump of +2686.5%: old 0.96 on 2006-10-06, new 26.75 on 2006-10-09"
+236,PETRONAS Energy Canada Ltd.,"236.1, 236.2","price jump of +23.7%: old 8.72 on 2009-01-15, new 10.79 on 2009-01-16"
+239,PTT Global Chemical Public Company Limited,"239.1, 239.2","price jump of -49.1%: old 106 on 2011-10-10, new 54 on 2011-10-21"
 240,Paramount Skydance Corporation,"240.1, 240.2, 240.3",2 old / 1 new trading items
 241,Paramount Skydance Corporation,"241.1, 241.2, 241.3, 241.4",2 old / 2 new trading items
+245,People's United Financial Inc.,"245.1, 245.2","price jump of -52.0%: old 43.27 on 2007-04-13, new 20.75 on 2007-04-16"
+247,Pinnacle Entertainment Inc.,"247.1, 247.2","price jump of -72.2%: old 37.74 on 2016-04-13, new 10.5 on 2016-04-14"
+249,Precision Drilling Corporation,"249.1, 249.2","price jump of +2054.5%: old 7.12 on 2010-06-01, new 153.4 on 2010-06-02"
+250,Precision Drilling Corporation,"250.1, 250.2","price jump of -38.7%: old 54.5 on 2005-11-04, new 33.4 on 2005-11-08"
+251,Progressive Waste Solutions Ltd.,"251.1, 251.2","price jump of +100.2%: old 18.25 on 2008-10-01, new 36.5317 on 2008-10-02"
+253,Qorvo Inc.,"253.1, 253.2","price jump of +324.4%: old 16.59 on 2014-12-31, new 70.4 on 2015-01-02"
+256,RF Capital Group Inc.,"256.1, 256.2","price jump of +914.0%: old 8.6 on 2009-05-21, new 87.2 on 2009-05-22"
+257,RF Capital Group Inc.,"257.1, 257.2","price jump of -52.2%: old 35.55 on 2005-11-30, new 17 on 2005-12-01"
+262,SCB X Public Company Limited,"262.1, 262.2","price jump of +60.6%: old 71 on 2022-04-26, new 114 on 2022-04-27"
+263,SQBG Inc.,"263.1, 263.2","price jump of +3839.7%: old 9.29 on 2015-12-04, new 366 on 2015-12-07"
+265,Sawai Group Holdings Co. Ltd.,"265.1, 265.2","price jump of -66.2%: old 5370 on 2021-03-29, new 1816.67 on 2021-04-01"
+269,Seadrill Limited,"269.1, 269.2","price jump of +18037.3%: old 0.102 on 2018-07-02, new 18.5 on 2018-07-03"
+281,Spirit Aviation Holdings Inc.,"281.1, 281.2",no linkage: gap of 48 days between old last price on 2025-03-12 and new first price 8.9 on 2025-04-29
+282,Spirit Realty Capital Inc.,"282.1, 282.2","price jump of +379.8%: old 9.71231 on 2013-07-17, new 46.6 on 2013-07-18"
+284,Stellar Bancorp Inc.,"284.1, 284.2","price jump of -29.0%: old 41.63 on 2022-09-30, new 29.54 on 2022-10-03"
 287,SunPower Corporation,"287.1, 287.2, 287.3",2 old / 1 new trading items
 288,Sunshine Lake Pharma Co. Ltd.,"288.1, 288.2",gap of 7 business days between last common price 2025-07-29 00:00:00 and new price
 290,Swiss Re AG,"290.1, 290.2",no price for new trading item in window
+298,TechnipFMC plc,"298.1, 298.2","price jump of -47.6%: old 67.4 on 2017-01-16, new 35.35 on 2017-01-17"
 299,Telecom Italia S.p.A.,"299.1, 299.2, 299.3",1 old / 2 new trading items
+300,Texas Pacific Land Corporation,"300.1, 300.2","price jump of -88.9%: old 832.24 on 2021-01-29, new 92.6667 on 2021-02-01"
+307,Third Coast Midstream LLC,"307.1, 307.2","price jump of +64.2%: old 9.44 on 2017-03-07, new 15.5 on 2017-03-09"
+308,Tilray Brands Inc.,"308.1, 308.2","price jump of +818.4%: old 17.53 on 2021-05-03, new 161 on 2021-05-04"
+315,US Airways Group Inc.,"315.1, 315.2","price jump of +121.8%: old 8.7 on 2005-09-26, new 19.3 on 2005-09-27"
+316,Ultra Petroleum Corp.,"316.1, 316.2","price jump of +67.6%: old 7.23 on 2017-04-11, new 12.12 on 2017-04-13"
+317,Ultrapar ParticipaÃ§Ãµes S.A.,"317.1, 317.2","price jump of -48.9%: old 27.1 on 2011-08-16, new 13.85 on 2011-08-17"
+318,Umios Corporation,"318.1, 318.2","price jump of +247.8%: old 170 on 2014-03-26, new 591.333 on 2014-04-01"
+320,United Airlines Holdings Inc.,"320.1, 320.2","price jump of +37750.9%: old 0.114 on 2006-01-25, new 43.15 on 2006-01-26"
+321,United Financial Bancorp Inc.,"321.1, 321.2","price jump of -35.1%: old 16.34 on 2011-03-03, new 10.6 on 2011-03-04"
+322,Universal American Corp.,"322.1, 322.2","price jump of -59.6%: old 23.1 on 2011-04-29, new 9.33 on 2011-05-02"
+323,VYNE Therapeutics Inc.,"323.1, 323.2","price jump of +452608.7%: old 2.99 on 2020-03-06, new 13536 on 2020-03-10"
+330,Vicinity Centres,"330.1, 330.2","price jump of +24.2%: old 2.44 on 2015-05-29, new 3.03 on 2015-06-12"
+331,Vifor Pharma AG,"331.1, 331.2","price jump of -99.0%: old 1415 on 2003-02-24, new 14.35 on 2003-02-25"
+333,Visteon Corporation,"333.1, 333.2","price jump of +9509.8%: old 0.5151 on 2010-09-24, new 49.5 on 2010-09-27"
 334,WCT Holdings Berhad,"334.1, 334.2",no price for new trading item in window
+335,WEG S.A.,"335.1, 335.2","price jump of -84.7%: old 16.1 on 2007-05-31, new 2.47041 on 2007-06-01"
 341,Warner Bros. Discovery Inc.,"341.1, 341.2, 341.3",2 old / 1 new trading items
 342,Warner Bros. Discovery Inc.,"342.1, 342.2, 342.3",1 old / 2 new trading items
+343,Waste Connections Inc.,"343.1, 343.2","price jump of -31.6%: old 65.47 on 2016-05-31, new 44.7867 on 2016-06-01"
+344,WebMD Health Corp.,"344.1, 344.2","price jump of +123.7%: old 15.23 on 2009-10-23, new 34.07 on 2009-10-26"
+347,Westfield Corporation,"347.1, 347.2","price jump of -35.0%: old 10.84 on 2014-06-24, new 7.05 on 2014-06-25"
+349,Whiting Petroleum Corporation,"349.1, 349.2","price jump of +3342.2%: old 0.5665 on 2020-09-01, new 19.5 on 2020-09-02"
 351,Wilh. Wilhelmsen Holding ASA,"351.1, 351.2",no price for new trading item after last common price in window
+355,Wolfspeed Inc.,"355.1, 355.2","price jump of -84.7%: old 144.875 on 2025-09-26, new 22.1 on 2025-09-29"

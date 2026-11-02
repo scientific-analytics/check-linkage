@@ -24,7 +24,7 @@ from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
-CANDIDATES_FILE = os.path.join(BASE_DIR, "Link-candidates.xlsx")
+CANDIDATES_FILE = os.path.join(BASE_DIR, "input", "Link-candidates.xlsx")
 DATA_GOV = "/home/rudy/PycharmProjects/check_referential/data_gov"
 WINDOW_DAYS = 15
 

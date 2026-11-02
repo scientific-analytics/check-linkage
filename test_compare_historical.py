@@ -10,7 +10,7 @@ pd.set_option("display.width", 250)
 groups, prices = load_inputs()
 rows, problems = build(groups, prices)
 
-historical = pd.read_excel(os.path.join(BASE_DIR, "Historical_DocLinkage.xlsx"), header=1)
+historical = pd.read_excel(os.path.join(BASE_DIR, "input", "Historical_DocLinkage.xlsx"), header=1)
 historical = historical.dropna(subset=["Link"])
 historical["Date"] = pd.to_datetime(historical["Date"])
 

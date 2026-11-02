@@ -3,12 +3,20 @@ Step 4 - Add the manually reviewed linkages to the result of Step 3.
 
   - output/Historical_DocLinkage_v2.xlsx : copy of output/Historical_DocLinkage_new.xlsx with
         DocLinkage : MANUAL_LINKAGES appended at the end (rows whose Link is already in the file are skipped),
+                     plus columns old_price, old_price_date (last close of the old trading item before Date)
+                     jump_pct (price / old_price - 1, in %) and old_share (shr of the old trading item) after note; every row (Historical_DocLinkage.xlsx,
+                     Step 2, manual) with |jump_pct| > MAX_PRICE_JUMP_PCT ("price jump") or more than MAX_GAP_DAYS
+                     days between old_price_date and Date ("no linkage") is moved to Decisions,
         Problems   : groups of linkage_problems.csv not solved by a manual linkage, one row per trading item,
                      note filled from problem_notes.csv (old row: note of its linkage, new row: note of the
                      linkage to it),
                      plus CIRCULAR_PROBLEMS (circular linkages left aside, with their reason),
         Decisions  : one row per forced decision (manual linkage added, new security without linkage,
-                     circular linkage not validated or left aside).
+                     circular linkage not validated or left aside), plus the linkages set aside by Step 2
+                     because of a price jump above MAX_PRICE_JUMP_PCT (decision "price jump", to check by hand)
+                     or of a gap of more than MAX_GAP_DAYS days between old and new prices (decision "no linkage").
+  - output/v1.csv : final file, DocLinkage sheet only with the 12 columns of Historical_DocLinkage.xlsx
+    (assetid ... note), strings stripped, Date as YYYY-MM-DD,
   - output/manual_linkages_<timestamp>.log
 
 Manual linkages:
@@ -17,24 +25,35 @@ Manual linkages:
   - groups with 1 old / 2 new trading items: "Correct linkage" row kept, "New security" row has no linkage.
 The source Historical_DocLinkage_new.xlsx is not modified.
 """
+import glob
 import logging
 import os
+import re
 from copy import copy
 from datetime import datetime
 
 import openpyxl
 import pandas as pd
+import psycopg2
+from dotenv import load_dotenv
+
+from Step_2_build_linkage import MAX_GAP_DAYS, MAX_PRICE_JUMP_PCT
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 SOURCE_FILE = os.path.join(OUTPUT_DIR, "Historical_DocLinkage_new.xlsx")
 TARGET_FILE = os.path.join(OUTPUT_DIR, "Historical_DocLinkage_v2.xlsx")
+FINAL_FILE = os.path.join(OUTPUT_DIR, "v1.csv")
 NOTES_FILE = os.path.join(BASE_DIR, "problem_notes.csv")
 HEADER_ROW = 2
 COLUMNS = ["assetid", "companyid", "securityid", "tradingitemid", "company", "security",
            "Link", "share", "price", "Date", "stamp", "note"]
 EXTRA = ["group", "role", "first_price_date", "last_price_date", "reason"]
 CIRCULAR_DATE = datetime(2008, 11, 3)
+OLD_PRICES_FILE = os.path.join(OUTPUT_DIR, "old_prices.csv")
+DATA_GOV = "/home/rudy/PycharmProjects/check_referential/data_gov"
+HISTORICAL_FILE = os.path.join(BASE_DIR, "input", "Historical_DocLinkage.xlsx")
+INITIAL_FILE_COMMENT = "déjà présent dans le fichier initial"
 
 # group: (assetid, companyid, securityid, tradingitemid, company, security, Link, share, price, Date, comment)
 MANUAL_LINKAGES = {
@@ -68,12 +87,12 @@ MANUAL_LINKAGES = {
           "2291:FYR", 276, 32.76, datetime(2014, 6, 30), "correct linkage, 3806:KIF FNFV is a new security (no linkage)"),
     157: ("1119:MAK", 671670, 83094656, 83100652, "H. Lundbeck A/S", "B Shares", "3414:HIW",
           794.272, 32.5, datetime(2022, 6, 10), "correct linkage, 6922:SIK A Shares is a new security (no linkage)"),
-    287: ("3897:BOD", 11420997, 24806828, 24806848, "SunPower Corporation", "Class A Common Stock", "7045:MEM",
-          1, 7.50, datetime(2011, 11, 17), "correct linkage, 1-for-1 reclassification of Class A and Class B into "
+    287: ("3897:BOD", 11420997, 143092165, 143092166, "SunPower Corporation", "Common Stock", "7045:MEM",
+          119.076, 7.50, datetime(2011, 11, 17), "correct linkage, 1-for-1 reclassification of Class A and Class B into "
                                             "a single Common Stock class (SEC-confirmed), linked via Class A "
                                             "(most liquid); 7965:KUG Class B not linked (no linkage)"),
-    341: ("7378:NOD", 22666093, 49031555, 49031559, "Warner Bros. Discovery Inc.", "Series A Common Stock",
-          "7463:MON", 1, 24.43, datetime(2022, 4, 8), "correct linkage, 1-for-1 reclassification of Series A, B "
+    341: ("7378:NOD", 22666093, 1776257809, 1776948460, "Warner Bros. Discovery Inc.", "New Ordinary Shares",
+          "7463:MON", 2426.844, 24.43, datetime(2022, 4, 8), "correct linkage, 1-for-1 reclassification of Series A, B "
                                                         "and C into New Ordinary Shares following the WarnerMedia/"
                                                         "Discovery merger (SEC 10-K confirmed), linked via Series A "
                                                         "(most liquid, price identical to new line every day in "
@@ -197,8 +216,21 @@ def remove_linkages(ws, header, logger):
             ws.delete_rows(r)
             logger.info(f"group {group} {values['company']}: removed {values['assetid']} -> {link} "
                         f"price {values['price']} on {values['Date']:%Y-%m-%d} ({comment})")
+    groups = pd.read_csv(os.path.join(OUTPUT_DIR, "linkage_groups.csv"))
+    problems = pd.read_csv(os.path.join(OUTPUT_DIR, "linkage_problems.csv")).set_index("group")["reason"]
+    prices = pd.read_csv(os.path.join(OUTPUT_DIR, "prices_around_linkage.csv"), parse_dates=["pricingdate"])
     for link in set(REMOVED_LINKAGES) - {v["Link"] for _, v, _ in removed}:
-        logger.warning(f"Link {link} to remove not found in DocLinkage")
+        group, comment = REMOVED_LINKAGES[link]
+        company = groups.loc[groups["group"] == group, "company"].iloc[0]
+        values = {**dict.fromkeys(COLUMNS), "company": company, "Link": link}
+        if group in problems.index and problems[group].startswith(("price jump of", "no linkage: gap")):
+            # linkage set aside by Step 2: values of the linkage Step 2 would have proposed
+            row = step2_decision(group, None, problems[group], groups, prices)
+            values.update(zip(["assetid", "tradingitemid", "security", "Link", "share", "price", "Date"], row[3:10]))
+            comment = f"{comment}; {problems[group]}"
+        removed.append((group, values, comment))
+        logger.info(f"group {group} {company}: linkage to {link} not in DocLinkage (set aside by Step 2), "
+                    f"kept as removed in Decisions ({comment})")
     return removed
 
 
@@ -221,12 +253,235 @@ def append_manual_linkages(ws, header, logger):
     return added
 
 
+def load_prices():
+    """Daily close by trading item: prices_around_linkage.csv and output/auc_timeseries/*/full_timeseries.csv."""
+    prices = pd.read_csv(os.path.join(OUTPUT_DIR, "prices_around_linkage.csv"), parse_dates=["pricingdate"])
+    frames = [prices[["tradingitemid", "pricingdate", "priceclose"]]]
+    for path in glob.glob(os.path.join(OUTPUT_DIR, "auc_timeseries", "*", "full_timeseries.csv")):
+        wide = pd.read_csv(path, parse_dates=["pricingdate"]).set_index("pricingdate")
+        wide.columns = [int(re.search(r"\((\d+)\)$", c).group(1)) for c in wide.columns]
+        frames.append(wide.stack().rename("priceclose").reset_index().rename(columns={"level_1": "tradingitemid"}))
+    if os.path.exists(OLD_PRICES_FILE):
+        frames.append(pd.read_csv(OLD_PRICES_FILE, parse_dates=["pricingdate"])[["tradingitemid", "pricingdate",
+                                                                                  "priceclose"]])
+    data = pd.concat(frames).drop_duplicates(["tradingitemid", "pricingdate"]).sort_values("pricingdate")
+    return {ti: d.set_index("pricingdate")["priceclose"] for ti, d in data.groupby("tradingitemid")}
+
+
+def load_auc_assets():
+    """Trading items of each asset with their period (since, until), from the latest data_gov auc_asset.csv."""
+    latest = sorted(glob.glob(os.path.join(DATA_GOV, "2*", "_universe", "auc_asset.csv")))[-1]
+    assets = pd.read_csv(latest, parse_dates=["since"])
+    assets["until"] = pd.to_datetime(assets["until"], errors="coerce").fillna(pd.Timestamp.max)
+    return assets
+
+
+def chain_old_assets(ws, header):
+    """(tradingitemid, Link) -> old asset: Link of the previous linkage of the same assetid chain (by Date),
+    else assetid."""
+    rows = [(str(ws.cell(r, header["assetid"]).value).strip(), ws.cell(r, header["Date"]).value,
+             int(ws.cell(r, header["tradingitemid"]).value), str(ws.cell(r, header["Link"]).value).strip())
+            for r in range(HEADER_ROW + 1, ws.max_row + 1) if ws.cell(r, header["assetid"]).value]
+    old, previous = {}, {}
+    for assetid, _, ti, link in sorted(rows, key=lambda x: (x[0], x[1])):
+        old[(ti, link)] = previous.get(assetid, assetid)
+        previous[assetid] = link
+    return old
+
+
+def auc_shares(tradingitemids):
+    """shr of each trading item at its last AUC review, from data_gov/<date>/_universe/auc.csv."""
+    frames = []
+    for path in sorted(glob.glob(os.path.join(DATA_GOV, "2*", "_universe", "auc.csv"))):
+        auc = pd.read_csv(path, usecols=["date", "tradingitemid", "shr"])
+        frames.append(auc[auc["tradingitemid"].isin(tradingitemids)])
+    data = pd.concat(frames)
+    return data.sort_values("date").groupby("tradingitemid")["shr"].last()
+
+
+def download_old_prices(requests, logger):
+    """Last CIQ close strictly before Date of each (tradingitemid, Date), appended to OLD_PRICES_FILE.
+    Skipped with a warning when CIQ is not reachable."""
+    load_dotenv(os.path.join(BASE_DIR, ".env"))
+    try:
+        conn = psycopg2.connect(host=os.getenv("DB_HOST"), database=os.getenv("DB_NAME"), user=os.getenv("DB_USER"),
+                                password=os.getenv("DB_PASSWORD"), port=os.getenv("DB_PORT"), connect_timeout=15)
+    except psycopg2.OperationalError as e:
+        logger.warning(f"CIQ not reachable, {len(requests)} old prices not downloaded: {str(e).splitlines()[0]}")
+        return False
+    query = """
+    WITH w AS (SELECT unnest(%s::bigint[]) AS tradingitemid, unnest(%s::date[]) AS linkage_date)
+    SELECT w.tradingitemid, w.linkage_date, p.pricingdate, p.priceclose
+    FROM w CROSS JOIN LATERAL (
+        SELECT pricingdate, priceclose FROM public.ciqpriceequity p
+        WHERE p.tradingitemid = w.tradingitemid AND p.pricingdate < w.linkage_date
+        ORDER BY pricingdate DESC LIMIT 1) p
+    """
+    with conn, conn.cursor() as cur:
+        cur.execute(query, ([int(t) for t, _ in requests], [d.date() for _, d in requests]))
+        data = pd.DataFrame(cur.fetchall(), columns=["tradingitemid", "linkage_date", "pricingdate", "priceclose"])
+    conn.close()
+    data["pricingdate"] = pd.to_datetime(data["pricingdate"])
+    data["priceclose"] = data["priceclose"].astype(float)
+    if os.path.exists(OLD_PRICES_FILE):
+        data = pd.concat([pd.read_csv(OLD_PRICES_FILE, parse_dates=["pricingdate"]), data])
+    data.drop_duplicates(["tradingitemid", "linkage_date"], keep="last") \
+        .sort_values(["tradingitemid", "pricingdate"]).to_csv(OLD_PRICES_FILE, index=False)
+    logger.info(f"CIQ: last old price before Date downloaded for {len(requests)} linkages into {OLD_PRICES_FILE}")
+    return True
+
+
+def old_trading_item(new_ti, assetid, link, groups, old_assets, chain_assets, auc_assets, date):
+    """Old trading item of a linkage, in the candidate group of the new trading item: the one of old_asset of
+    Step 2; otherwise (manual linkages, rows of Historical_DocLinkage.xlsx) the trading item of the old asset of the
+    chain (previous Link of the same assetid), searched in the candidate group, then in all groups, then in
+    auc_asset.csv (alive the day before Date); last resort the only old trading item of the group where it is new."""
+    in_groups = groups.loc[groups["tradingitemid"] == new_ti, "group"]
+    others = groups[groups["group"].isin(in_groups) & (groups["tradingitemid"] != new_ti)]
+    if (new_ti, link) in old_assets:
+        match = others[others["asset"] == old_assets[(new_ti, link)]]
+        if not match.empty:
+            return int(match["tradingitemid"].iloc[0])
+    old_asset = chain_assets.get((new_ti, link), assetid)
+    match = others[others["asset"] == old_asset]
+    if not match.empty:
+        return int(match["tradingitemid"].iloc[0])
+    match = groups[(groups["asset"] == old_asset) & (groups["tradingitemid"] != new_ti)].sort_values("date")
+    if not match.empty:
+        return int(match["tradingitemid"].iloc[-1])
+    day_before = date - pd.Timedelta(days=1)
+    match = auc_assets[(auc_assets["asset"] == old_asset) & (auc_assets["tradingitemid"] != new_ti)]
+    alive = match[(match["since"] <= day_before) & (match["until"] >= day_before)]
+    match = alive if not alive.empty else match
+    if not match.empty:
+        return int(match["tradingitemid"].iloc[-1])
+    as_new = groups.loc[(groups["tradingitemid"] == new_ti) & (groups["role"] == "new"), "group"]
+    olds = others.loc[others["group"].isin(as_new) & (others["role"] == "old"), "tradingitemid"].unique()
+    return int(olds[0]) if len(olds) == 1 else None
+
+
+def add_old_price(ws, header, logger):
+    """Columns after note: old_price and old_price_date (last close of the old trading item before Date; downloaded from CIQ into OLD_PRICES_FILE when not in the local prices or older than
+    MAX_GAP_DAYS), jump_pct (price / old_price - 1, in %) and old_share (shr of the old
+    trading item at its last review in Link-candidates.xlsx, else in data_gov auc.csv).
+    No old price for a row already in HISTORICAL_FILE: old_price = INITIAL_FILE_COMMENT.
+    Rows with a price jump above MAX_PRICE_JUMP_PCT or a gap above MAX_GAP_DAYS are removed from DocLinkage,
+    returned as Decisions rows ("price jump" / "no linkage")."""
+    manual_groups = {row[6]: group for group, row in MANUAL_LINKAGES.items()}
+    groups = pd.read_csv(os.path.join(OUTPUT_DIR, "linkage_groups.csv"))
+    proposed = pd.read_csv(os.path.join(OUTPUT_DIR, "proposed_linkage.csv"))
+    old_assets = dict(zip(zip(proposed["tradingitemid"], proposed["Link"]), proposed["old_asset"]))
+    initial = pd.read_excel(HISTORICAL_FILE, header=HEADER_ROW - 1).dropna(subset=["Link"])
+    initial_rows = set(zip(initial["tradingitemid"].astype(int), initial["Link"].astype(str).str.strip()))
+    chain_assets = chain_old_assets(ws, header)
+    auc_assets = load_auc_assets()
+    linkages = []
+    for r in range(HEADER_ROW + 1, ws.max_row + 1):
+        values = {c: ws.cell(r, header[c]).value for c in COLUMNS}
+        if not values["assetid"]:
+            continue
+        date = pd.Timestamp(values["Date"])
+        key = (int(values["tradingitemid"]), str(values["Link"]).strip())
+        old_ti = old_trading_item(key[0], str(values["assetid"]).strip(), key[1], groups, old_assets,
+                                  chain_assets, auc_assets, date)
+        linkages.append((r, values, date, key, old_ti))
+    prices = load_prices()
+
+    def last_close(old_ti, date):
+        old = prices.get(old_ti)
+        old = old[old.index < date] if old is not None else None
+        return None if old is None or old.empty else (old.index[-1], float(old.iloc[-1]))
+
+    downloaded = pd.read_csv(OLD_PRICES_FILE, parse_dates=["linkage_date"]) if os.path.exists(OLD_PRICES_FILE) \
+        else pd.DataFrame(columns=["tradingitemid", "linkage_date"])
+    done = set(zip(downloaded["tradingitemid"], downloaded["linkage_date"]))
+    requests = [(old_ti, date) for _, _, date, _, old_ti in linkages if old_ti is not None
+                and (old_ti, date) not in done
+                and (last_close(old_ti, date) is None or (date - last_close(old_ti, date)[0]).days > MAX_GAP_DAYS)]
+    if requests and download_old_prices(requests, logger):
+        prices = load_prices()
+    cols = {name: header["note"] + i
+            for i, name in enumerate(["old_price", "old_price_date", "jump_pct", "old_share"], start=1)}
+    old_shares = groups.sort_values("date").groupby("tradingitemid")["shr"].last()
+    not_in_groups = {old_ti for *_, old_ti in linkages if old_ti is not None} - set(old_shares.index)
+    if not_in_groups:
+        old_shares = pd.concat([old_shares, auc_shares(not_in_groups)])
+    src = ws.cell(HEADER_ROW, header["note"])
+    for name, col in cols.items():
+        cell = ws.cell(HEADER_ROW, col, name)
+        cell.font, cell.fill = copy(src.font), copy(src.fill)
+        cell.alignment, cell.border = copy(src.alignment), copy(src.border)
+        template = header["Date"] if name == "old_price_date" else header["share" if name == "old_share" else "price"]
+        ws.column_dimensions[openpyxl.utils.get_column_letter(col)].width = \
+            ws.column_dimensions[openpyxl.utils.get_column_letter(template)].width
+    missing, moved, to_delete = 0, [], []
+    for r, values, date, key, old_ti in linkages:
+        if old_ti in old_shares.index:
+            copy_style(ws.cell(r, cols["old_share"], round(float(old_shares[old_ti]), 3)), ws.cell(r, header["share"]))
+        old = last_close(old_ti, date)
+        if old is None:
+            missing += 1
+            in_initial = key in initial_rows
+            if in_initial:
+                cell = ws.cell(r, cols["old_price"], INITIAL_FILE_COMMENT)
+                cell.font = copy(ws.cell(r, header["note"]).font)
+            logger.warning(f"{str(values['company']).strip()} {values['assetid']} -> {values['Link']} on "
+                           f"{date:%Y-%m-%d}: no price of the old trading item {old_ti} before Date, old_price "
+                           + (f"'{INITIAL_FILE_COMMENT}'" if in_initial else "left empty"))
+            continue
+        old_date, old_price = old
+        copy_style(ws.cell(r, cols["old_price"], round(old_price, 4)), ws.cell(r, header["price"]))
+        copy_style(ws.cell(r, cols["old_price_date"], old_date.to_pydatetime()), ws.cell(r, header["Date"]))
+        jump = (values["price"] / old_price - 1) * 100
+        cell = ws.cell(r, cols["jump_pct"], round(jump, 2))
+        cell.font = copy(ws.cell(r, header["price"]).font)
+        cell.number_format = "0.00"
+        gap_days = (date - old_date).days
+        origin = ("initial file" if key in initial_rows else
+                  "manual linkage" if key[1] in manual_groups else "Step 2")
+        if gap_days > MAX_GAP_DAYS:
+            decision = "no linkage"
+            comment = (f"no linkage: gap of {gap_days} days between old last price {old_price:g} on "
+                       f"{old_date:%Y-%m-%d} and new price {values['price']:g} on {date:%Y-%m-%d} ({origin})")
+        elif abs(jump) > MAX_PRICE_JUMP_PCT:
+            decision = "price jump"
+            comment = (f"price jump of {jump:+.1f}%: old {old_price:g} on {old_date:%Y-%m-%d}, new "
+                       f"{values['price']:g} on {date:%Y-%m-%d} ({origin})")
+        else:
+            continue
+        moved.append([manual_groups.get(key[1]), str(values["company"]).strip(), decision,
+                      str(values["assetid"]).strip(), values["tradingitemid"], values["security"], key[1],
+                      values["share"], values["price"], values["Date"], comment])
+        to_delete.append(r)
+        logger.info(f"{str(values['company']).strip()} {values['assetid']} -> {key[1]}: moved from DocLinkage to "
+                    f"Decisions ({comment})")
+    for r in reversed(to_delete):
+        ws.delete_rows(r)
+    letters = ", ".join(openpyxl.utils.get_column_letter(c) for c in cols.values())
+    logger.info(f"DocLinkage: old_price, old_price_date, jump_pct, old_share added in columns {letters}, "
+                f"{missing} rows without old price, {len(moved)} rows moved to Decisions")
+    return moved
+
+
+def step2_decision(group, decision, reason, groups, prices):
+    """Decisions row of a group set aside by Step 2 for a price jump or a price gap: the linkage Step 2 would have
+    proposed, Date and price of the new trading item read at the end of the reason ("... X on YYYY-MM-DD")."""
+    old = groups[(groups["group"] == group) & (groups["role"] == "old")].iloc[0]
+    new = groups[(groups["group"] == group) & (groups["role"] == "new")].iloc[0]
+    date = pd.Timestamp(re.search(r"on (\d{4}-\d{2}-\d{2})$", reason).group(1))
+    close = prices[(prices["tradingitemid"] == new["tradingitemid"]) & (prices["pricingdate"] == date)]["priceclose"]
+    return [group, new["company"], decision, old["asset"], new["tradingitemid"], new["security"], new["asset"],
+            round(new["shr"], 3), round(float(close.iloc[0]), 4), date.to_pydatetime(), reason]
+
+
 def problem_rows(logger):
-    """Groups of linkage_problems.csv not solved by a manual linkage, one row per trading item."""
+    """Groups of linkage_problems.csv not solved by a manual linkage, one row per trading item, and the Decisions
+    rows of the groups set aside by Step 2 for a price jump."""
     groups = pd.read_csv(os.path.join(OUTPUT_DIR, "linkage_groups.csv"),
                          parse_dates=["first_price_date", "last_price_date"])
     problems = pd.read_csv(os.path.join(OUTPUT_DIR, "linkage_problems.csv"))
-    rows = []
+    prices = pd.read_csv(os.path.join(OUTPUT_DIR, "prices_around_linkage.csv"), parse_dates=["pricingdate"])
+    rows, jumps = [], []
     for _, p in problems.iterrows():
         g = p["group"]
         if g in MANUAL_LINKAGES:
@@ -234,6 +489,16 @@ def problem_rows(logger):
             continue
         if g in NO_LINKAGE:
             logger.info(f"group {g} {p['company']}: no linkage decided, not in Problems ({NO_LINKAGE[g][2]})")
+            continue
+        removed = [link for link, (group, _) in REMOVED_LINKAGES.items() if group == g]
+        if removed:
+            logger.info(f"group {g} {p['company']}: linkage to {removed[0]} not validated, not in Problems "
+                        f"({REMOVED_LINKAGES[removed[0]][1]})")
+            continue
+        if p["reason"].startswith(("price jump of", "no linkage: gap")):
+            decision = "price jump" if p["reason"].startswith("price jump") else "no linkage"
+            jumps.append(step2_decision(g, decision, p["reason"], groups, prices))
+            logger.info(f"group {g} {p['company']}: in Decisions, not in Problems ({p['reason']})")
             continue
         if g in NOT_VALIDATED:
             logger.info(f"group {g} {p['company']}: circular linkage not validated, not in Problems "
@@ -259,7 +524,7 @@ def problem_rows(logger):
                          "first_price_date": t["first_price_date"], "last_price_date": t["last_price_date"],
                          "reason": p["reason"]})
         logger.info(f"group {g} {p['company']}: {len(grp)} trading items in Problems ({p['reason']})")
-    return rows
+    return rows, jumps
 
 
 def apply_problem_notes(rows, logger):
@@ -318,12 +583,15 @@ def write_problems_sheet(wb, src, header, rows):
     ws.freeze_panes = src.freeze_panes
 
 
-def decision_rows(removed):
-    rows = []
+def decision_rows(removed, jumps, moved):
+    rows = list(jumps) + list(moved)
+    moved_links = {r[6] for r in moved}
     for group, v, comment in removed:
         rows.append([group, v["company"], "linkage removed", v["assetid"], v["tradingitemid"], v["security"], v["Link"],
                      v["share"], v["price"], v["Date"], comment])
     for group, (assetid, _, _, ti, company, security, link, share, price, date, comment) in MANUAL_LINKAGES.items():
+        if link in moved_links:
+            continue
         rows.append([group, company, "manual linkage added", assetid, ti, security, link, share, price, date, comment])
     for group, (company, ti, asset, security) in NEW_SECURITIES.items():
         rows.append([group, company, "new security, no linkage", None, ti, security, asset, None, None, None,
@@ -338,7 +606,7 @@ def decision_rows(removed):
         rows.append([group, company, "circular linkage left aside", assetid, ti, security, link, share, price,
                      CIRCULAR_DATE, reason])
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-    return sorted((r + [today] for r in rows), key=lambda r: (r[1], r[0], r[2]))
+    return sorted((r + [today] for r in rows), key=lambda r: (r[1], -1 if r[0] is None else r[0], r[2]))
 
 
 def write_decisions_sheet(wb, src, header, rows):
@@ -371,9 +639,11 @@ if __name__ == "__main__":
 
     removed = remove_linkages(ws, header, logger)
     added = append_manual_linkages(ws, header, logger)
-    rows = apply_problem_notes(problem_rows(logger), logger)
+    moved = add_old_price(ws, header, logger)
+    rows, jumps = problem_rows(logger)
+    rows = apply_problem_notes(rows, logger)
     write_problems_sheet(wb, ws, header, rows)
-    decisions = decision_rows(removed)
+    decisions = decision_rows(removed, jumps, moved)
     write_decisions_sheet(wb, ws, header, decisions)
     for d in decisions:
         if d[2] == "new security, no linkage":
@@ -384,6 +654,14 @@ if __name__ == "__main__":
     duplicated = doc["Link"].duplicated().sum()
     if duplicated:
         logger.warning(f"{duplicated} duplicated Link in DocLinkage")
-    logger.info(f"{TARGET_FILE}: DocLinkage {len(doc)} rows ({added} manual), "
+    logger.info(f"{TARGET_FILE}: DocLinkage {len(doc)} rows ({added - sum(r[0] in MANUAL_LINKAGES for r in moved)} manual), "
                 f"Problems {len(rows)} rows in {len({r['group'] for r in rows})} groups, Decisions {len(decisions)} rows")
+    final = doc[COLUMNS].copy()
+    for col in ["assetid", "company", "security", "Link", "stamp", "note"]:
+        final[col] = final[col].astype(str).str.strip()
+    for col in ["companyid", "securityid", "tradingitemid"]:
+        final[col] = final[col].astype(str).str.strip().astype("int64")
+    final["Date"] = pd.to_datetime(final["Date"]).dt.strftime("%Y-%m-%d")
+    final.to_csv(FINAL_FILE, index=False)
+    logger.info(f"{FINAL_FILE}: {len(final)} rows, columns {', '.join(COLUMNS)}")
     logger.info("=== Manual Linkages Completed ===")

@@ -15,7 +15,11 @@ Groups are set aside (problems file) when:
   - more than one old or new trading item,
   - old and new trading items share the same asset id,
   - no price for the new trading item in the window,
-  - gap between last common price date and Date greater than MAX_GAP_BDAYS business days.
+  - gap between last common price date and Date greater than MAX_GAP_BDAYS business days,
+  - no linkage: more than MAX_GAP_DAYS calendar days between the last price of the old trading item
+    (full CIQ history) and the first price of the new trading item at Date,
+  - price jump: price differs by more than MAX_PRICE_JUMP_PCT from the last close of the old trading item
+    before Date (or no close of the old trading item before Date in the window); checked by hand.
 
 Outputs (folder "output"):
   - proposed_linkage.csv
@@ -29,6 +33,8 @@ import pandas as pd
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 MAX_GAP_BDAYS = 5
+MAX_PRICE_JUMP_PCT = 20
+MAX_GAP_DAYS = 15
 STAMP = "AUC v2"
 
 
@@ -50,6 +56,7 @@ def build_row(group, prices):
         return None, "old and new share the same asset id"
 
     new_prices = prices[prices["tradingitemid"] == new["tradingitemid"]].sort_values("pricingdate")
+    old_prices = prices[prices["tradingitemid"] == old["tradingitemid"]].sort_values("pricingdate")
     if new_prices.empty:
         return None, "no price for new trading item in window"
 
@@ -59,7 +66,6 @@ def build_row(group, prices):
         first = new_prices[new_prices["pricingdate"] >= new["first_price_date"]]
         reference = old_last
     else:
-        old_prices = prices[prices["tradingitemid"] == old["tradingitemid"]]
         both = new_prices.merge(old_prices, on="pricingdate", suffixes=("", "_old"))
         equal = both[(both["priceclose"] - both["priceclose_old"]).abs() < 1e-6]
         reference = equal["pricingdate"].max() if not equal.empty else old_last
@@ -71,6 +77,21 @@ def build_row(group, prices):
     gap = int(np.busday_count(reference.date(), first["pricingdate"].date())) if pd.notna(reference) else None
     if not real_new_listing and (gap is None or gap > MAX_GAP_BDAYS):
         return None, f"gap of {gap} business days between last common price {reference} and new price"
+
+    gap_days = (first["pricingdate"] - old_last).days if pd.notna(old_last) else None
+    if gap_days is not None and gap_days > MAX_GAP_DAYS:
+        return None, (f"no linkage: gap of {gap_days} days between old last price on {old_last:%Y-%m-%d} and "
+                      f"new first price {first['priceclose']:g} on {first['pricingdate']:%Y-%m-%d}")
+
+    old_before = old_prices[old_prices["pricingdate"] < first["pricingdate"]]
+    if old_before.empty:
+        return None, f"price jump not checked: no price for old trading item before {first['pricingdate']:%Y-%m-%d}"
+    old_last_price = old_before.iloc[-1]
+    jump = (first["priceclose"] / old_last_price["priceclose"] - 1) * 100
+    if abs(jump) > MAX_PRICE_JUMP_PCT:
+        return None, (f"price jump of {jump:+.1f}%: old {old_last_price['priceclose']:g} on "
+                      f"{old_last_price['pricingdate']:%Y-%m-%d}, new {first['priceclose']:g} on "
+                      f"{first['pricingdate']:%Y-%m-%d}")
 
     return {
         "group": group["group"].iloc[0],
@@ -121,7 +142,7 @@ def build(groups, prices, known_links=None):
 
 if __name__ == "__main__":
     groups, prices = load_inputs()
-    historical = pd.read_excel(os.path.join(BASE_DIR, "Historical_DocLinkage.xlsx"), header=1)
+    historical = pd.read_excel(os.path.join(BASE_DIR, "input", "Historical_DocLinkage.xlsx"), header=1)
     known_links = dict(zip(historical["Link"], historical["assetid"]))
     rows, problems = build(groups, prices, known_links)
     rows.to_csv(os.path.join(OUTPUT_DIR, "proposed_linkage.csv"), index=False)
