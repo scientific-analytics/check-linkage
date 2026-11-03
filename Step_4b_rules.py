@@ -6,8 +6,15 @@ Inputs:
   - input/Historical_DocLinkage.xlsx (initial linkages),
   - input/manual_decisions.csv: decisions of the manual review, one row per decision (manual linkage added,
     new security, no linkage, circular linkage not validated, linkage removed), with their decided_on date,
+  - input/forced_trading_items.csv: committee decisions, the primary trading item of a security is forced to another
+    one; when the old trading item of a linkage belongs to such a security, the forced one replaces it before the
+    rules and the note "tid before linkage is forced to <tid>" is written in note (or in the Decisions comment),
   - CIQ for the old prices missing in the Step 1 window (cached in output/old_prices.csv and
-    output/price_ranges.csv). output/auc_timeseries/ is not used.
+    output/price_ranges.csv) and for the adjustment factor of the new trading items at their AUC review (cached in
+    output/adjustment_factors.csv). output/auc_timeseries/ is not used.
+
+Share is indicative (CIQ prices are split adjusted): for a group or manual linkage, when a split happens after the
+AUC review of the new trading item, share = AUC share x CIQ adjustment factor at the review date, with a note.
 
 Rules, applied to every candidate group of Link-candidates.xlsx (Treated empty) and to every row of
 Historical_DocLinkage.xlsx. Date and price of a group are computed as in Step 2 (first price of a real new listing,
@@ -26,9 +33,10 @@ else first new price after the last price common to old and new trading items).
 Manual decisions are kept and replace the rules for their groups; a manual linkage still goes through the Decisions
 rules (no price, currency change, no linkage, price jump).
 
-Output: output/Historical_DocLinkage_v4.xlsx
+Output: output/Historical_DocLinkage_v5.xlsx
   - DocLinkage : initial rows, then rows of the candidate groups (by company and Date), then manual linkages,
-                 with columns old_price, old_price_date, jump_pct, old_share after note,
+                 with columns old_tradingitemid, old_price, old_price_date, jump_pct, old_share, old_currency,
+                 new_currency after note,
   - Problems   : one row per trading item of the groups (or initial rows) to check by hand, with the reason,
   - Decisions  : manual decisions and rows moved out by the rules, with the reason.
 """
@@ -38,6 +46,7 @@ import os
 from copy import copy
 from datetime import datetime
 
+import numpy as np
 import openpyxl
 import pandas as pd
 import psycopg2
@@ -49,14 +58,17 @@ from Step_2_build_linkage import MAX_GAP_DAYS, MAX_PRICE_JUMP_PCT, STAMP, load_i
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 HISTORICAL_FILE = os.path.join(BASE_DIR, "input", "Historical_DocLinkage.xlsx")
-TARGET_FILE = os.path.join(OUTPUT_DIR, "Historical_DocLinkage_v4.xlsx")
+TARGET_FILE = os.path.join(OUTPUT_DIR, "Historical_DocLinkage_v5.xlsx")
 PRICE_RANGES_FILE = os.path.join(OUTPUT_DIR, "price_ranges.csv")
+ADJUSTMENT_FILE = os.path.join(OUTPUT_DIR, "adjustment_factors.csv")
 MANUAL_FILE = os.path.join(BASE_DIR, "input", "manual_decisions.csv")
+FORCED_FILE = os.path.join(BASE_DIR, "input", "forced_trading_items.csv")
 DECISION_COLUMNS = ["group", "company", "decision", "assetid", "tradingitemid", "security", "Link", "share", "price",
                     "Date", "comment"]
 HEADER_ROW = 2
 COLUMNS = manual.COLUMNS
-INFO_COLUMNS = ["old_price", "old_price_date", "jump_pct", "old_share"]
+INFO_COLUMNS = ["old_tradingitemid", "old_price", "old_price_date", "jump_pct", "old_share", "old_currency",
+                "new_currency"]
 CANDIDATES = "Link-candidates"  # origin of a linkage computed from a group of input/Link-candidates.xlsx
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
@@ -113,6 +125,51 @@ def ciq_price_ranges(tradingitemids):
             cache.to_csv(PRICE_RANGES_FILE, index=False)
             logger.info(f"CIQ: price range of {len(new)} trading items saved in {PRICE_RANGES_FILE}")
     return cache.set_index("tradingitemid")
+
+
+def ciq_adjustment_factors(requests):
+    """CIQ close and adjustment factor of each (trading item, AUC review date): last price on or before the review
+    date (factor = splits after the review), cached in ADJUSTMENT_FILE.
+    Return {(tradingitemid, review_date): (priceclose, factor)}."""
+    columns = ["tradingitemid", "review_date", "pricingdate", "priceclose", "adjustmentfactor"]
+    cache = pd.read_csv(ADJUSTMENT_FILE, parse_dates=["review_date", "pricingdate"]) \
+        if os.path.exists(ADJUSTMENT_FILE) else pd.DataFrame(columns=columns)
+    missing = sorted(set(requests) - set(zip(cache["tradingitemid"], cache["review_date"])))
+    if missing:
+        load_dotenv(os.path.join(BASE_DIR, ".env"))
+        try:
+            conn = psycopg2.connect(host=os.getenv("DB_HOST"), database=os.getenv("DB_NAME"),
+                                    user=os.getenv("DB_USER"), password=os.getenv("DB_PASSWORD"),
+                                    port=os.getenv("DB_PORT"), connect_timeout=15)
+        except psycopg2.OperationalError as e:
+            logger.warning(f"CIQ not reachable, adjustment factor of {len(missing)} trading items not downloaded, "
+                           f"share not adjusted for splits: {str(e).splitlines()[0]}")
+        else:
+            with conn, conn.cursor() as cur:
+                cur.execute("""
+                    WITH r AS (SELECT unnest(%s::bigint[]) AS tradingitemid, unnest(%s::date[]) AS review_date)
+                    SELECT r.tradingitemid, r.review_date, p.pricingdate, p.priceclose, p.adjustmentfactor
+                    FROM r JOIN LATERAL (SELECT e.pricingdate, e.priceclose, e.adjustmentfactor
+                                         FROM public.ciqpriceequity e
+                                         WHERE e.tradingitemid = r.tradingitemid AND e.pricingdate <= r.review_date
+                                         ORDER BY e.pricingdate DESC LIMIT 1) p ON true""",
+                            ([int(t) for t, _ in missing], [d.date() for _, d in missing]))
+                new = pd.DataFrame(cur.fetchall(), columns=columns)
+            conn.close()
+            new[["review_date", "pricingdate"]] = new[["review_date", "pricingdate"]].apply(pd.to_datetime)
+            new[["priceclose", "adjustmentfactor"]] = new[["priceclose", "adjustmentfactor"]].astype(float)
+            cache = pd.concat([cache, new]) if not cache.empty else new
+            cache.to_csv(ADJUSTMENT_FILE, index=False)
+            logger.info(f"CIQ: adjustment factor of {len(new)} trading items saved in {ADJUSTMENT_FILE}")
+    return {(int(r["tradingitemid"]), r["review_date"]): (float(r["priceclose"]), float(r["adjustmentfactor"]))
+            for _, r in cache.iterrows()}
+
+
+def is_split(factor):
+    """True for a split or reverse split factor (k, 1/k or a ratio with a small denominator, e.g. 1.5 for 3:2)."""
+    if pd.isna(factor) or factor <= 0 or abs(factor - 1) < 1e-6:
+        return False
+    return any(abs(x * d - round(x * d)) < 1e-4 for x in (factor, 1 / factor) for d in range(1, 11))
 
 
 def load_manual():
@@ -195,6 +252,8 @@ def switch(old, new, prices):
 def problem_rows_of_group(group, reason):
     rows = []
     olds = group.loc[group["role"] == "old", "asset"].tolist()
+    currencies = {role: "/".join(sorted(group.loc[group["role"] == role, "currency"].dropna().astype(str).unique()))
+                  or None for role in ("old", "new")}
     for _, t in group.sort_values(["role", "row"], ascending=[False, True]).iterrows():
         is_old = t["role"] == "old"
         rows.append({"assetid": t["asset"] if is_old else (olds[0] if len(olds) == 1 else None),
@@ -202,7 +261,8 @@ def problem_rows_of_group(group, reason):
                      "company": t["company"], "security": t["security"], "Link": None if is_old else t["asset"],
                      "share": round(t["shr"], 3), "price": None, "Date": None, "stamp": STAMP, "note": "-",
                      "group": t["group"], "role": t["role"], "first_price_date": t["first_price_date"],
-                     "last_price_date": t["last_price_date"], "reason": reason})
+                     "last_price_date": t["last_price_date"], "reason": reason,
+                     "old_currency": currencies["old"], "new_currency": currencies["new"]})
     return rows
 
 
@@ -288,6 +348,25 @@ def main():
                                          auc_assets, pd.Timestamp(values["Date"]))
         candidates.append(("manual linkage", g, values, old_ti, None, None, None))
 
+    # forced trading items (committee decisions, by security of the old trading item): the forced trading item
+    # replaces the old one; for a candidate group the old asset becomes the asset of the forced trading item
+    forced = pd.read_csv(FORCED_FILE).set_index("securityid")["forced_tradingitemid"].astype(int).to_dict() \
+        if os.path.exists(FORCED_FILE) else {}
+    security_of = pd.concat([groups[["tradingitemid", "securityid"]], auc_assets[["tradingitemid", "securityid"]]]) \
+        .drop_duplicates("tradingitemid").set_index("tradingitemid")["securityid"]
+    for i, (origin, g, values, old_ti, old_last, old_cur, new_cur) in enumerate(candidates):
+        if old_ti is None or security_of.get(old_ti) not in forced:
+            continue
+        ti = forced[security_of[old_ti]]
+        values["forced"] = f"tid before linkage is forced to {ti}"
+        if ti != old_ti:
+            assets = auc_assets.loc[auc_assets["tradingitemid"] == ti, "asset"]
+            if origin == CANDIDATES and not assets.empty:
+                values["assetid"] = values["old_asset"] = assets.iloc[0]
+            candidates[i] = (origin, g, values, ti, None, None, new_cur)
+        logger.info(f"{origin} group {g} {values['company']} -> {values['Link']}: old trading item {old_ti}, "
+                    f"{values['forced']} (forced_trading_items.csv)")
+
     # 2. data of the old and new trading items not in the candidate groups (auc.csv, CIQ)
     in_groups = groups.drop_duplicates("tradingitemid").set_index("tradingitemid")
     tis = {c[3] for c in candidates if c[3] is not None} | {int(c[2]["tradingitemid"]) for c in candidates}
@@ -343,17 +422,21 @@ def main():
     for origin, g, values, old_ti, old_last, old_cur, new_cur in candidates:
         label = f"{origin} {'' if g is None else f'group {g} '}{values['company']} {values['assetid']} -> " \
                 f"{values['Link']}"
+        old_cur = old_cur if old_cur is not None else (None if old_ti is None else currency(old_ti))
+        new_cur = new_cur if new_cur is not None else currency(int(values["tradingitemid"]))
+        if "forced" in values and old_ti not in in_groups.index and old_ti not in auc.index:
+            values["forced"] += (f"; tid {old_ti} not in AUC: old currency and old share unknown, currency rule "
+                                 f"not checked")
         if values["Date"] is None:
             destination, result, info = "decision", ("no price", "no price of the new trading item in the window"), \
                 dict.fromkeys(INFO_COLUMNS)
         else:
-            new_ti = int(values["tradingitemid"])
             destination, result, info = check_row(
-                values, old_ti, old_last if old_last is not None else last_price_date(old_ti),
-                old_cur if old_cur is not None else currency(old_ti),
-                new_cur if new_cur is not None else currency(new_ti), prices,
-                check_alive=origin != "manual linkage")
+                values, old_ti, old_last if old_last is not None else last_price_date(old_ti), old_cur, new_cur,
+                prices, check_alive=origin != "manual linkage")
         info["old_share"] = None if old_ti is None or pd.isna(shares(old_ti)) else round(float(shares(old_ti)), 3)
+        info["old_currency"], info["new_currency"] = old_cur, new_cur
+        info["old_tradingitemid"] = None if old_ti is None else int(old_ti)
         values.update(info)
         if g in removed_groups:
             link, comment, decided_on = removed_groups[g]
@@ -362,9 +445,11 @@ def main():
             logger.info(f"{label}: linkage removed by manual decision ({comment})")
             continue
         if destination == "linkage":
-            if result:
-                values["note"] = result
-                logger.info(f"{label}: linkage with note ({result})")
+            notes = [n for n in (values.get("forced"), result) if n]
+            if notes:
+                values["note"] = "; ".join(notes)
+                logger.info(f"{label}: linkage with note ({values['note']})")
+            values["group"] = g
             kept.append((origin, values))
         elif destination == "problem":
             problems.append({**{c: values.get(c) for c in COLUMNS + INFO_COLUMNS}, "group": g, "role": origin,
@@ -374,14 +459,43 @@ def main():
             decision, reason = result
             decisions.append([g, str(values["company"]).strip(), decision, values["assetid"], values["tradingitemid"],
                               values["security"], values["Link"], values["share"], values["price"], values["Date"],
-                              f"{reason} ({origin})"])
+                              f"{reason}" + (f"; {values['forced']}" if "forced" in values else "") + f" ({origin})"])
             logger.info(f"{label}: {decision} ({reason})")
+
+    # share is indicative and CIQ prices are split adjusted: share of a group or manual linkage x CIQ adjustment
+    # factor at the AUC review date of the new trading item, with a note, when the factor is a split, the share is the
+    # AUC share of the review (not already adjusted by hand) and the AUC price of the review is before the split
+    review = groups.drop_duplicates(["group", "tradingitemid"]).set_index(["group", "tradingitemid"])
+    todo = [(v, review.loc[(v["group"], int(v["tradingitemid"]))]) for o, v in kept
+            if o != "initial file" and (v["group"], int(v["tradingitemid"])) in review.index]
+    ciq = ciq_adjustment_factors({(int(v["tradingitemid"]), r["date"]) for v, r in todo})
+    for v, r in todo:
+        close, factor = ciq.get((int(v["tradingitemid"]), r["date"]), (None, None))
+        if factor is None or not is_split(factor):
+            continue
+        label = f"group {v['group']} {v['company']} {v['assetid']} -> {v['Link']}"
+        if abs(v["share"] - round(r["shr"], 3)) > 1e-3:
+            logger.info(f"{label}: split factor {factor:g} not applied, share {v['share']:g} is not the AUC share "
+                        f"{r['shr']:g} of {r['date']:%Y-%m-%d} (already adjusted)")
+            continue
+        if abs(np.log(r["prc"] / (close * factor))) > abs(np.log(r["prc"] / close)):
+            logger.info(f"{label}: split factor {factor:g} not applied, AUC price {r['prc']:g} of "
+                        f"{r['date']:%Y-%m-%d} is already after the split (CIQ {close:g})")
+            continue
+        share, v["share"] = v["share"], round(v["share"] * factor, 3)
+        note = f"share adjusted for split: AUC share {share:g} on {r['date']:%Y-%m-%d} x CIQ adjustment factor " \
+               f"{factor:g}"
+        v["note"] = note if v["note"] in ("-", None) else f"{v['note']}; {note}"
+        logger.info(f"{label}: {note}")
 
     # 5. DocLinkage rows: initial, groups (root assetid, no Link already in the initial file), manual
     initial_rows = [v for o, v in kept if o == "initial file"]
     group_rows = [v for o, v in kept if o == CANDIDATES]
     manual_rows = [v for o, v in kept if o == "manual linkage"]
-    resolve_root(group_rows, dict(zip(initial["Link"], initial["assetid"])))
+    for v in manual_rows:
+        v.setdefault("old_asset", v["assetid"])
+    # root over groups and manual linkages together: the return linkage of a circular chain gets the first asset id
+    resolve_root(group_rows + manual_rows, dict(zip(initial["Link"], initial["assetid"])))
     initial_links = set(initial["Link"])
     skipped = [v for v in group_rows if v["Link"] in initial_links]
     for v in skipped:
@@ -419,6 +533,8 @@ def write_note_sheet(wb, counts):
          "relier l'ancien asset au nouveau titre pour garder un historique continu.", None),
         ("Une ligne de DocLinkage : assetid = ancien asset (racine de la chaîne), Link = nouvel asset ; companyid, "
          "securityid, tradingitemid, security, share et price sont ceux du nouveau titre à la Date.", None),
+        ("Chaîne circulaire (X -> Y puis retour à X) : assetid = premier asset X sur toutes les lignes, la linkage "
+         "de retour est donc X -> X.", None),
         ("", None),
         ("Sources", "head"),
         ("Link-candidates.xlsx : groupes de candidats repérés dans AUC (titres de la dernière review = nouveaux, "
@@ -429,7 +545,11 @@ def write_note_sheet(wb, counts):
         ("Date et prix", "head"),
         ("Date = premier jour où le nouveau titre cote pour lui-même : premier prix d'une nouvelle cotation, ou jour "
          "qui suit le dernier prix commun quand CIQ a recopié l'historique de l'ancien titre.", None),
-        ("price = clôture du nouveau titre à la Date ; share = nombre d'actions du nouveau titre (AUC).", None),
+        ("price = clôture du nouveau titre à la Date ; share = nombre d'actions du nouveau titre (AUC), indicatif.",
+         None),
+        ("Split : les prix CIQ sont ajustés des splits ; quand un split a lieu après la review AUC du nouveau titre, "
+         "share = share AUC x facteur d'ajustement CIQ à la date de la review, avec une note (lignes du fichier "
+         "initial et share déjà ajusté à la main non modifiés).", None),
         ("", None),
         ("Règles (groupes, fichier initial et linkages manuelles)", "head"),
         (f"Linkage gardée : 1 ancien titre s'arrête, 1 nouveau reprend, même devise, interruption <= {MAX_GAP_DAYS} "
@@ -449,8 +569,12 @@ def write_note_sheet(wb, counts):
         ("Décisions manuelles (circulaires, séparations de classes, no linkage) reprises de la revue, dans "
          "input/manual_decisions.csv ; les "
          "linkages manuelles passent aussi les règles de saut, devise, interruption et prix.", None),
-        ("Colonnes d'information : old_price, old_price_date, jump_pct, old_share (ancien titre) ; old_share "
-         "n'est pas un critère.", None),
+        ("Trading items forcés (décision de comité, input/forced_trading_items.csv) : quand l'ancien trading item "
+         "d'une linkage appartient à une security dont le trading item a été forcé, le trading item forcé le remplace "
+         "avant les règles ; note « tid before linkage is forced to <tid> » (commentaire dans Decisions).", None),
+        ("Colonnes d'information : old_tradingitemid, old_price, old_price_date, jump_pct, old_share (ancien titre), "
+         "old_currency, new_currency (devise de l'ancien et du nouveau titre) ; old_share n'est pas un critère.",
+         None),
         ("", None),
         ("Origine des linkages", "head"),
         ("« initial file » : la linkage existait déjà, complète, dans Historical_DocLinkage.xlsx. Date, price et "
@@ -503,11 +627,14 @@ def write_workbook(doc_rows, problems, decisions, counts):
         cell = ws.cell(HEADER_ROW, c, name)
         cell.font, cell.fill = copy(note_header.font), copy(note_header.fill)
         cell.alignment, cell.border = copy(note_header.alignment), copy(note_header.border)
-        width_of = "Date" if name == "old_price_date" else ("share" if name == "old_share" else "price")
+        width_of = {"old_tradingitemid": "tradingitemid", "old_price_date": "Date", "old_share": "share",
+                    "old_currency": "stamp", "new_currency": "stamp"}.get(name, "price")
         ws.column_dimensions[openpyxl.utils.get_column_letter(c)].width = \
             ws.column_dimensions[openpyxl.utils.get_column_letter(header[width_of])].width
     styles.update({"old_price": styles["price"], "old_price_date": styles["Date"], "old_share": styles["share"],
-                   "jump_pct": (styles["price"][0], "0.00")})
+                   "jump_pct": (styles["price"][0], "0.00"), "old_tradingitemid": styles["tradingitemid"],
+                   "old_currency": styles["stamp"],
+                   "new_currency": styles["stamp"]})
 
     for i, values in enumerate(doc_rows, start=template):
         for col in COLUMNS + INFO_COLUMNS:

@@ -1,0 +1,1040 @@
+companyid,field,value,action,reason
+18965,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+19431,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+22497,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+24281,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+24368,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+24563,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+25142,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+25256,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+25788,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+25926,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+26097,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+26202,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+26236,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+27201,industry_code,10140020,fill,Not covered by Morningstar; CIQ industry Paper and Forest Products
+27591,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+27639,industry_code,20660010,fill,Not covered by Morningstar; CIQ industry Life Sciences Tools and Services
+27782,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+27899,industry_code,20540010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+28671,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+29181,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+29973,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+30220,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+30466,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+31463,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+31746,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+32084,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+32290,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+32360,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+32702,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+32836,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+33046,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+33653,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+34141,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+34682,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+34702,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+34841,industry_code,20560010,fill,Not covered by Morningstar; CIQ industry Tobacco
+35175,industry_code,20645030,fill,Not covered by Morningstar; CIQ industry Health Care Technology
+35238,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+35781,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+35831,industry_code,31010010,fill,Not covered by Morningstar; CIQ industry Aerospace and Defense
+36125,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+36268,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+36846,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+93139,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+93481,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+98500,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+99397,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+99832,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+101658,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+101938,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+107534,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+108416,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+109456,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+112355,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+112383,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+120286,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+120423,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+120770,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+120833,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+120918,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+122212,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+123891,industry_code,10230010,fill,Not covered by Morningstar; CIQ industry Household Durables
+124001,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+127012,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+127049,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+127205,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+127282,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+128460,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+129445,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+130796,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+134358,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+135266,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+138618,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+167536,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+176159,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+182949,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+185684,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+220168,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+223501,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+226420,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+242090,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+249489,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+253955,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+254034,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+257079,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+261974,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+265308,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+265833,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+267161,industry_code,10140020,fill,Not covered by Morningstar; CIQ industry Paper and Forest Products
+274298,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+274350,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+274488,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+275492,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+284038,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+288355,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+289885,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+300328,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+300438,industry_code,20720040,fill,Not covered by Morningstar; CIQ industry Independent Power and Renewable Electricity Producers
+310736,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+310955,industry_code,31080020,fill,Not covered by Morningstar; CIQ industry Passenger Airlines
+313828,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+317428,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+318159,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+322547,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+322753,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+323203,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+324559,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+324911,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+325464,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+326028,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+332250,industry_code,10250010,fill,Not covered by Morningstar; CIQ industry Containers and Packaging
+333996,industry_code,10420070,fill,Not covered by Morningstar; CIQ industry Mortgage Real Estate Investment Trusts (REITs)
+337366,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+337790,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+338117,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+339408,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+342638,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+343622,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+344039,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+346549,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+348583,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+348834,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+350018,industry_code,20645030,fill,Not covered by Morningstar; CIQ industry Health Care Technology
+351216,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+352003,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+355733,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+357390,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+357760,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+358002,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+362652,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+363126,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+364865,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+365619,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+365762,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+367478,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+370413,industry_code,10420030,fill,Not covered by Morningstar; CIQ industry Industrial REITs
+377668,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+378060,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+381189,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+383247,industry_code,10420070,fill,Not covered by Morningstar; CIQ industry Mortgage Real Estate Investment Trusts (REITs)
+387325,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+389298,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+390056,industry_code,31010010,fill,Not covered by Morningstar; CIQ industry Aerospace and Defense
+393365,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+393599,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+397032,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+397092,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+397634,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+400390,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+402139,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+402181,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+404460,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+404807,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+407268,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+409326,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+409636,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+410708,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+410996,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+411054,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+411212,industry_code,20525030,fill,Not covered by Morningstar; CIQ industry Personal Care Products
+412192,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+412548,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+412802,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+413114,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+413478,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+418583,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+419298,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+426320,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+426848,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+427845,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+428293,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+429675,industry_code,10130010,fill,Not covered by Morningstar; CIQ industry Chemicals
+429685,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+433352,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+436744,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+436852,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+439108,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+515232,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+521152,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+522205,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+527232,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+527874,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+534185,industry_code,10260010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+543051,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+544128,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+558792,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+563500,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+595370,industry_code,31040030,fill,Not covered by Morningstar; CIQ industry Building Products
+606780,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+606850,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+618593,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+626754,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+632087,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+639856,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+649013,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+655569,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+658767,industry_code,20720040,fill,Not covered by Morningstar; CIQ industry Independent Power and Renewable Electricity Producers
+658839,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+669061,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+671804,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+675518,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+675558,industry_code,10250010,fill,Not covered by Morningstar; CIQ industry Containers and Packaging
+677376,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+681565,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+685712,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+686153,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+686679,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+687083,industry_code,20525030,fill,Not covered by Morningstar; CIQ industry Personal Care Products
+688871,industry_code,10130010,fill,Not covered by Morningstar; CIQ industry Chemicals
+690173,industry_code,31080040,fill,Not covered by Morningstar; CIQ industry Marine Transportation
+701495,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+702428,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+703060,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+705664,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+710788,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+715481,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+716268,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+716962,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+718018,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+722871,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+728733,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+729136,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+736431,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+742363,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+751118,industry_code,10120010,fill,Not covered by Morningstar; CIQ industry Construction Materials
+765022,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+773416,industry_code,10350010,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+792955,industry_code,20660010,fill,Not covered by Morningstar; CIQ industry Life Sciences Tools and Services
+794669,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+805150,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+810569,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+815303,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+839319,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+845679,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+846524,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+848670,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+858757,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+873661,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+873662,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+873727,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+873728,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+873749,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+873800,industry_code,10280020,fill,Not covered by Morningstar; CIQ industry Broadline Retail
+873886,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+874015,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+874020,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+874037,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+874068,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+874073,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+874086,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+874131,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+874134,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+874142,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+874166,industry_code,10280060,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+874200,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+874206,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+874237,industry_code,10340010,fill,Not covered by Morningstar; CIQ industry Insurance
+874266,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+874291,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+874292,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+874294,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+874308,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+874338,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+874362,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+874437,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+874483,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+874504,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+874545,industry_code,20550030,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+874590,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+874603,industry_code,20720040,fill,Not covered by Morningstar; CIQ industry Multi-Utilities
+874630,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+874639,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+874734,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+874765,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+874769,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+874787,industry_code,20525030,fill,Not covered by Morningstar; CIQ industry Personal Care Products
+874793,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+874905,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+874908,industry_code,10140020,fill,Not covered by Morningstar; CIQ industry Paper and Forest Products
+874924,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+874936,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+874952,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+875018,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+875066,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+875068,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+875073,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+875121,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+875163,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+875211,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+875267,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+875272,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+875273,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+875278,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+875296,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+875410,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+875414,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+875444,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+875451,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+875463,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+875494,industry_code,10140020,fill,Not covered by Morningstar; CIQ industry Paper and Forest Products
+875535,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+875613,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+875615,industry_code,31040030,fill,Not covered by Morningstar; CIQ industry Building Products
+875653,industry_code,20550030,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+875704,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+875705,industry_code,10420040,fill,Not covered by Morningstar; CIQ industry Office REITs
+875718,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+875791,industry_code,31010010,fill,Not covered by Morningstar; CIQ industry Aerospace and Defense
+875839,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+875875,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+875908,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+875949,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+875993,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+876040,industry_code,31040020,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+876116,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+876242,industry_code,31040030,fill,Not covered by Morningstar; CIQ industry Building Products
+876254,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+876294,industry_code,31040030,fill,Not covered by Morningstar; CIQ industry Building Products
+876347,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+876425,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+876469,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+876540,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+876570,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+876571,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+876603,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+876736,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+876743,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+876752,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+876786,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+876800,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+876810,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+876823,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+876825,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+876836,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+876846,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+876886,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+876938,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+876996,industry_code,10120010,fill,Not covered by Morningstar; CIQ industry Construction Materials
+877005,industry_code,10340020,fill,Not covered by Morningstar; CIQ industry Insurance
+877191,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+877264,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+877270,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+877339,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+877440,industry_code,31020020,fill,Not covered by Morningstar; CIQ industry Health Care Technology
+877478,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+877509,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+877531,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+877707,industry_code,31080040,fill,Not covered by Morningstar; CIQ industry Marine Transportation
+877805,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+877817,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+877834,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+877926,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+877990,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Automobile Components
+878014,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+878039,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+878042,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+878045,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+878076,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+878098,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+878099,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+878109,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878111,industry_code,31080030,fill,Not covered by Morningstar; CIQ industry Ground Transportation
+878133,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Distributors
+878166,industry_code,31080020,fill,Not covered by Morningstar; CIQ industry Passenger Airlines
+878190,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878201,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+878203,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+878312,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+878329,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+878376,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+878386,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+878404,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+878417,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878473,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+878517,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+878547,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+878550,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+878604,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+878612,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+878639,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878641,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878643,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+878707,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+878743,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+878789,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+878797,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+878840,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+878868,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+878943,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+878996,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+879045,industry_code,10140020,fill,Not covered by Morningstar; CIQ industry Paper and Forest Products
+879052,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+879128,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+879167,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+879317,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+879349,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+879364,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+879371,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+879406,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Multi-Utilities
+879416,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+879489,industry_code,10350010,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+879545,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Automobile Components
+879546,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+879576,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+879718,industry_code,10340010,fill,Not covered by Morningstar; CIQ industry Insurance
+879815,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+880029,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+880096,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+880123,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+880216,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+880335,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+880434,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+880493,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+880529,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+880891,industry_code,10280020,fill,Not covered by Morningstar; CIQ industry Broadline Retail
+880908,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+880950,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+880985,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Automobile Components
+881012,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+881028,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+881150,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+881158,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+881236,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+881315,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+881317,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+881325,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+881462,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+881485,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Consumer Finance
+881527,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+881532,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+881602,industry_code,10350010,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+881636,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+881727,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+881728,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+881745,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+881769,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+881773,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+881780,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+881799,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+881891,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+881912,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+882008,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+882186,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+882207,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+882291,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+882384,industry_code,10120010,fill,Not covered by Morningstar; CIQ industry Construction Materials
+882435,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+882498,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+882539,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+882574,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+882670,industry_code,20550030,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+882673,industry_code,20560010,fill,Not covered by Morningstar; CIQ industry Tobacco
+882693,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+882841,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+882905,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+882931,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+882939,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+882964,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+883022,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+883061,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+883146,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+883169,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+883247,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+883346,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+883355,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+883362,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+883425,industry_code,31080020,fill,Not covered by Morningstar; CIQ industry Passenger Airlines
+883442,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+883636,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+883648,industry_code,10280020,fill,Not covered by Morningstar; CIQ industry Broadline Retail
+883657,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+883667,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+883702,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+883740,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+883947,industry_code,10260010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+883977,industry_code,10280060,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+884045,industry_code,31080030,fill,Not covered by Morningstar; CIQ industry Ground Transportation
+884121,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+884244,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+884315,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+884358,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+884373,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+884415,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+884422,industry_code,20660010,fill,Not covered by Morningstar; CIQ industry Life Sciences Tools and Services
+932986,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+964999,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+972041,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+976158,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+991815,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+994891,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+1025864,industry_code,31010010,fill,Not covered by Morningstar; CIQ industry Aerospace and Defense
+1080936,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+1151490,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+1163873,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+1172058,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+1176557,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+1255977,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+1273942,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Consumer Finance
+1341753,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+1342641,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+1343561,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+1370763,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+1413040,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+1461861,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+1515567,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+1540538,industry_code,31040030,fill,Not covered by Morningstar; CIQ industry Building Products
+1542746,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+1691879,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+1789631,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+1877648,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+1889747,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+1988889,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+2025955,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+2027478,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+2109161,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+2143874,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+2381971,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+2396018,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+2418056,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+2420862,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+2421027,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+2436349,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+2444394,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+2445566,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+2445690,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+2445752,industry_code,31080060,fill,Not covered by Morningstar; CIQ industry Air Freight and Logistics
+2456710,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+2459772,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+2459865,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+2482043,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+2491910,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+2557233,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+2697432,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+2893078,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+2970929,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+3027309,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+3040189,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+3103316,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+3103366,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+3110114,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+3161285,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+3169956,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+3197334,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+3206201,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+3272260,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+3291170,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+3333625,industry_code,20550030,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+3462053,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+3560560,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+3609766,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+3621039,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+3743797,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+4016526,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+4142028,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+4211633,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+4249927,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+4395602,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+4449968,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+4481366,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+4481751,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+4481960,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+4483839,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+4484046,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+4492829,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+4493269,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+4493369,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+4493393,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+4493460,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+4493567,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+4494975,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+4508786,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Consumer Finance
+4508901,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+4508988,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+4509143,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+4509272,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+4509282,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+4509290,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+4512352,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+4666216,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+4720240,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+4912309,industry_code,20525030,fill,Not covered by Morningstar; CIQ industry Household Products
+5118312,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+5410483,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+5418684,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+5452917,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+5463514,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+5467243,industry_code,10340010,fill,Not covered by Morningstar; CIQ industry Insurance
+5468763,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+5471059,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Consumer Finance
+5482350,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Professional Services
+5490154,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Distributors
+5490294,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+5491237,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+5503623,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+5521725,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Automobile Components
+5522186,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+5531808,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+5533250,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+5546994,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+5551569,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+5553596,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+5566710,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+5567490,industry_code,10280060,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+5579307,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+5588258,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+5663969,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+5686114,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+5689087,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+5704701,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+5754696,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Distributors
+5777389,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+5778021,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+5845147,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+5853674,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+5885204,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+6071261,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+6124147,industry_code,31080060,fill,Not covered by Morningstar; CIQ industry Air Freight and Logistics
+6135613,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+6234400,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+6282440,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+6371228,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+6384924,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Insurance
+6487630,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+6488083,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+6493081,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+6493768,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+6507620,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+6562074,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+6564018,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+6789823,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+6813000,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+6868151,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+6926623,industry_code,31120030,fill,Not covered by Morningstar; CIQ industry Household Durables
+6942636,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+6952789,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+7192197,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+7388754,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+7652741,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+7652809,industry_code,31020010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+7652816,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+7652821,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+7653057,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+7653113,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+7653140,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+7654910,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+7655744,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+7657344,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+7680286,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+7685084,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+7685646,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+7688986,industry_code,31080060,fill,Not covered by Morningstar; CIQ industry Air Freight and Logistics
+7689563,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+7689876,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+7731435,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+7913251,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+7940983,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+7985943,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+8080584,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+8081247,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+8089631,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+8089633,industry_code,31120020,fill,"Not covered by Morningstar; CIQ industry Technology Hardware, Storage and Peripherals"
+8101560,industry_code,10420070,fill,Not covered by Morningstar; CIQ industry Mortgage Real Estate Investment Trusts (REITs)
+8178306,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+8179479,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+8179994,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+8186263,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+8188399,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+8209426,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+8269647,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+8276675,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+8289721,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+8474551,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+8672870,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+8868602,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+8888589,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+8927082,industry_code,10280060,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+8931412,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+9074140,industry_code,31040020,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+9088049,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+9140602,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+9193591,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+9206677,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+9237222,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+9237267,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+9247431,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+9264553,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+9283877,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+9301619,industry_code,20720010,fill,Not covered by Morningstar; CIQ industry Water Utilities
+9392087,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+9454574,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+9515144,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+9571062,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+9587130,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+9609614,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+9610412,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+9616643,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+9637643,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+9647564,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+9650588,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+9663948,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+9708771,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+9708825,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+9776821,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+9829324,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+9846494,industry_code,31040020,fill,Not covered by Morningstar; CIQ industry Transportation Infrastructure
+9870586,industry_code,31120010,fill,Not covered by Morningstar; CIQ industry Communications Equipment
+9898546,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+9937728,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+9950879,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+10004664,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+10160224,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+10185809,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+10200316,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+10245846,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+10256404,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+10332013,industry_code,31080020,fill,Not covered by Morningstar; CIQ industry Passenger Airlines
+10360600,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+10530772,industry_code,20660010,fill,Not covered by Morningstar; CIQ industry Life Sciences Tools and Services
+10548249,industry_code,10130010,fill,Not covered by Morningstar; CIQ industry Chemicals
+10639770,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+10659726,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+10779139,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+10813717,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+11149827,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+11212016,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+11216869,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+11235675,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+11248173,industry_code,10420060,fill,Not covered by Morningstar; CIQ industry Retail REITs
+11323442,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+11354939,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+11421806,industry_code,20720030,fill,Not covered by Morningstar; CIQ industry Gas Utilities
+11422199,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+11777021,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+12505891,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+12720586,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+12720879,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+12736007,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+12763439,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+12784499,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+12824762,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+13167753,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+13314017,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+13338391,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+13357270,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+13406783,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+13565068,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+13598362,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+13717229,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+13718112,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+20345286,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+20356627,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20357515,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+20360036,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20360081,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20360108,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+20364548,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20375330,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Industrial Conglomerates
+20383728,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+20384634,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+20385082,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+20406731,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20459901,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+20503964,industry_code,10320030,fill,Not covered by Morningstar; CIQ industry Financial Services
+20551774,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+20701065,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+20784823,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+20951221,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+21766682,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+21811656,industry_code,10250010,fill,Not covered by Morningstar; CIQ industry Containers and Packaging
+21811783,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+22002260,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+22071210,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+22093604,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+22093864,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+22225924,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+22262998,industry_code,10330020,fill,Not covered by Morningstar; CIQ industry Capital Markets
+22286818,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+22354320,industry_code,20720040,fill,Not covered by Morningstar; CIQ industry Independent Power and Renewable Electricity Producers
+22384733,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+22521524,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Diversified Telecommunication Services
+22710151,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+22885154,industry_code,10150040,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+22934389,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+22968953,industry_code,10410030,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+23067277,industry_code,30810010,fill,Not covered by Morningstar; CIQ industry Wireless Telecommunication Services
+23443131,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+23501136,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+23875493,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+24083863,industry_code,20630010,fill,Not covered by Morningstar; CIQ industry Health Care Providers and Services
+24113235,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+24176825,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+24183814,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+24247322,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+24309453,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+24494980,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+24624634,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+24659547,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+24687354,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+24869101,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Consumer Finance
+24964947,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+25069817,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+25069822,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+25118083,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+25254825,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+25477661,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+25673592,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+25696430,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+25815608,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+25841481,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+25984519,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+26081182,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+26142747,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+26180395,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+26221897,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+26340239,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+26340324,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+26427481,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+26432759,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+26579685,industry_code,10320020,fill,Not covered by Morningstar; CIQ industry Banks
+26593586,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+26670236,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+26897124,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+27568908,industry_code,10280010,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+27568911,industry_code,30820030,fill,Not covered by Morningstar; CIQ industry Media
+27647974,industry_code,10420030,fill,Not covered by Morningstar; CIQ industry Industrial REITs
+27777507,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+28047740,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+28511122,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+28511833,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+28560666,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+28675941,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+28689431,industry_code,10150040,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+28946324,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+29381607,industry_code,31130020,fill,Not covered by Morningstar; CIQ industry Semiconductors and Semiconductor Equipment
+29413865,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+29814917,industry_code,10420010,fill,Not covered by Morningstar; CIQ industry Health Care REITs
+30004292,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+30006184,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+30325413,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+30342081,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+30347299,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+30566080,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+30576752,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+31100507,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+33277223,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+34534237,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+35385900,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+35987459,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+36170218,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+36377628,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+36482637,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+37119968,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+38946943,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+38989056,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+39128587,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+39265071,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+39458624,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+40401543,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+41839861,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Financial Services
+43324915,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+44199817,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+45113644,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+45986750,industry_code,20720020,fill,Not covered by Morningstar; CIQ industry Electric Utilities
+47411570,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+47689579,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+49440944,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+49793155,industry_code,20720040,fill,Not covered by Morningstar; CIQ industry Independent Power and Renewable Electricity Producers
+49900317,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+51279444,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+53339386,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+53563921,industry_code,31080030,fill,Not covered by Morningstar; CIQ industry Ground Transportation
+54505568,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+59002578,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+59029754,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+60422520,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+61600315,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+62615281,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+65030158,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+69189070,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+73517766,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+82871890,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+84133076,industry_code,20645030,fill,Not covered by Morningstar; CIQ industry Health Care Technology
+91876783,industry_code,31090010,fill,Not covered by Morningstar; CIQ industry Commercial Services and Supplies
+98245078,industry_code,10280020,fill,Not covered by Morningstar; CIQ industry Broadline Retail
+105901833,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+108533826,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+108542809,industry_code,10150030,fill,Not covered by Morningstar; CIQ industry Metals and Mining
+108897249,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+108995654,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+109222793,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+110175276,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+111581217,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+113807139,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+115469365,industry_code,10280040,fill,"Not covered by Morningstar; CIQ industry Textiles, Apparel and Luxury Goods"
+116393456,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+127478785,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+128100436,industry_code,10410010,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+132847531,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+136875161,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+141647006,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+142651139,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+144135668,industry_code,10420060,fill,Not covered by Morningstar; CIQ industry Retail REITs
+144617841,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+145398610,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+154090027,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+154091089,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+159388563,industry_code,10420070,fill,Not covered by Morningstar; CIQ industry Mortgage Real Estate Investment Trusts (REITs)
+204765597,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+207313236,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+207416774,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+207433977,industry_code,20520010,fill,Not covered by Morningstar; CIQ industry Beverages
+214824484,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+215652585,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+215858840,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+222454833,industry_code,10340060,fill,Not covered by Morningstar; CIQ industry Financial Services
+223115679,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+224865286,industry_code,10200030,fill,Not covered by Morningstar; CIQ industry Automobile Components
+225098093,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+225557674,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+225807943,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+228733949,industry_code,10420010,fill,Not covered by Morningstar; CIQ industry Health Care REITs
+234075074,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+236234671,industry_code,10420040,fill,Not covered by Morningstar; CIQ industry Office REITs
+236366991,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+236767818,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+242024499,industry_code,31030010,fill,Not covered by Morningstar; CIQ industry Trading Companies and Distributors
+246770932,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+249319773,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+250340486,industry_code,10420030,fill,Not covered by Morningstar; CIQ industry Industrial REITs
+251859572,industry_code,30910060,fill,Not covered by Morningstar; CIQ industry Energy Equipment and Services
+252053415,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+252706115,industry_code,10340010,fill,Not covered by Morningstar; CIQ industry Insurance
+254710704,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+256716885,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+256948064,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+260503979,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+261970466,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+262241549,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+266230063,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+268869522,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+272216006,industry_code,10130020,fill,Not covered by Morningstar; CIQ industry Chemicals
+274894404,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+289122806,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+290658496,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+291350447,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+292391607,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+301557937,industry_code,10270010,fill,"Not covered by Morningstar; CIQ industry Hotels, Restaurants and Leisure"
+311433371,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+315889640,industry_code,10420040,fill,Not covered by Morningstar; CIQ industry Office REITs
+317005729,industry_code,10200020,fill,Not covered by Morningstar; CIQ industry Automobiles
+317643712,industry_code,10330020,fill,Not covered by Morningstar; CIQ industry Capital Markets
+328905428,industry_code,10420030,fill,Not covered by Morningstar; CIQ industry Industrial REITs
+333301486,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+364404754,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+402754209,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+408200196,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+409918376,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+414726860,industry_code,30820010,fill,Not covered by Morningstar; CIQ industry Media
+416410193,industry_code,10360010,fill,Not covered by Morningstar; CIQ industry Financial Services
+417468487,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+417715026,industry_code,10420010,fill,Not covered by Morningstar; CIQ industry Health Care REITs
+417941221,industry_code,10120010,fill,Not covered by Morningstar; CIQ industry Construction Materials
+418598112,industry_code,10420090,fill,Not covered by Morningstar; CIQ industry Diversified REITs
+422050753,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+422120630,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+428898270,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+431422346,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+431954144,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+433874536,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+531369527,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+532466377,industry_code,10230010,fill,Not covered by Morningstar; CIQ industry Household Durables
+534464066,industry_code,10420030,fill,Not covered by Morningstar; CIQ industry Industrial REITs
+535225771,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+539698599,industry_code,31110020,fill,Not covered by Morningstar; CIQ industry Professional Services
+544408354,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+546815975,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+547804145,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+548541911,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+553592932,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+554422655,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+557661793,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+570720021,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+570895157,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+571916618,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+572198042,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+580659409,industry_code,10320010,fill,Not covered by Morningstar; CIQ industry Banks
+584336972,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+590438897,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+598300198,industry_code,31120040,fill,"Not covered by Morningstar; CIQ industry Electronic Equipment, Instruments and Components"
+632676240,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+633151331,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+636010818,industry_code,20610010,fill,Not covered by Morningstar; CIQ industry Biotechnology
+642376859,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+649011761,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+658164015,industry_code,10330020,fill,Not covered by Morningstar; CIQ industry Capital Markets
+667033420,industry_code,31110010,fill,Not covered by Morningstar; CIQ industry IT Services
+687376080,industry_code,10420050,fill,Not covered by Morningstar; CIQ industry Residential REITs
+688464823,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+694664082,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+699804990,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+702706192,industry_code,20540010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+712146583,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+713127898,industry_code,31080040,fill,Not covered by Morningstar; CIQ industry Marine Transportation
+713569779,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+1673587918,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+1673816955,industry_code,20540010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+1675049393,industry_code,31080060,fill,Not covered by Morningstar; CIQ industry Air Freight and Logistics
+1677816261,industry_code,10420010,fill,Not covered by Morningstar; CIQ industry Health Care REITs
+1680399403,industry_code,10330010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+1683508334,industry_code,20650010,fill,Not covered by Morningstar; CIQ industry Health Care Equipment and Supplies
+1683561176,industry_code,10290020,fill,Not covered by Morningstar; CIQ industry Leisure Products
+1684525014,industry_code,10310010,fill,Not covered by Morningstar; CIQ industry Capital Markets
+1757585121,industry_code,20525040,fill,Not covered by Morningstar; CIQ industry Food Products
+1773311882,industry_code,20540010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+1787788477,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+1793710969,industry_code,20540010,fill,Not covered by Morningstar; CIQ industry Diversified Consumer Services
+1805752706,industry_code,10410020,fill,Not covered by Morningstar; CIQ industry Real Estate Management and Development
+1819166758,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+1819432576,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+1828423003,industry_code,30820010,fill,Not covered by Morningstar; CIQ industry Media
+1835526247,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+1838372683,industry_code,20550010,fill,Not covered by Morningstar; CIQ industry Consumer Staples Distribution and Retail
+1844243432,industry_code,10420080,fill,Not covered by Morningstar; CIQ industry Specialized REITs
+1847842771,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment
+1862498952,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Machinery
+1865732034,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+1869663925,industry_code,30830010,fill,Not covered by Morningstar; CIQ industry Interactive Media and Services
+1870354309,industry_code,31070020,fill,Not covered by Morningstar; CIQ industry Electrical Equipment
+1875380655,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+1875979261,industry_code,31010010,fill,Not covered by Morningstar; CIQ industry Aerospace and Defense
+1882052837,industry_code,10280030,fill,Not covered by Morningstar; CIQ industry Specialty Retail
+1884314969,industry_code,30910030,fill,"Not covered by Morningstar; CIQ industry Oil, Gas and Consumable Fuels"
+1889523566,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+1898879471,industry_code,31080040,fill,Not covered by Morningstar; CIQ industry Marine Transportation
+1903355992,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+1909900483,industry_code,20620010,fill,Not covered by Morningstar; CIQ industry Pharmaceuticals
+1916142466,industry_code,31040010,fill,Not covered by Morningstar; CIQ industry Construction and Engineering
+1936998715,industry_code,31110030,fill,Not covered by Morningstar; CIQ industry Software
+1938102826,industry_code,30820040,fill,Not covered by Morningstar; CIQ industry Entertainment

@@ -1,0 +1,4 @@
+securityid,forced_tradingitemid,company,comment
+613560477,613560478,Ferguson Enterprises Inc.,"committee decision: primary trading item of security 613560477 forced to the LSE line 613560478 (6795:GAF, GBP) instead of the NYSE line 613560578 (3783:RYL, USD)"
+24346079,23692079,DSM-Firmenich AG,"committee decision: trading item before the linkage 3733:FET -> 5061:PUB forced to 23692079"
+20064147,250418132,Rheinmetall AG,"committee decision: trading item before the linkage 1658:GAJ -> 1300:CAR forced to 250418132 instead of 20165315"

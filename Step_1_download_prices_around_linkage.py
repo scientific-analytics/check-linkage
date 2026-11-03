@@ -11,7 +11,8 @@ Then prices of every trading item of the group are downloaded on
 [linkage date - WINDOW_DAYS, linkage date + WINDOW_DAYS].
 
 Outputs (folder "output"):
-  - linkage_groups.csv   : one row per trading item with its group, role, first/last price date and window
+  - linkage_groups.csv   : one row per trading item with its group, role, first/last price date, window and
+                           the currencies of the old and new trading items of its group (old_currency, new_currency)
   - prices_around_linkage.csv : daily prices in the window
 """
 import logging
@@ -114,6 +115,16 @@ def estimate_linkage_date(group):
     return new["date"].max()
 
 
+def group_currencies(candidates):
+    """old_currency and new_currency of each group (currencies joined with "/" when the old trading items differ)."""
+    currencies = (candidates.dropna(subset=["currency"])
+                  .groupby(["group", "role"])["currency"]
+                  .agg(lambda c: "/".join(sorted(c.astype(str).unique())))
+                  .unstack("role")
+                  .reindex(columns=["old", "new"]))
+    return currencies.add_suffix("_currency")
+
+
 if __name__ == "__main__":
     logger = setup_logging()
     logger.info("=== Starting Download Prices Around Linkage ===")
@@ -147,6 +158,12 @@ if __name__ == "__main__":
         candidates = candidates.merge(linkage_dates, left_on="group", right_index=True)
         candidates["start_date"] = candidates["linkage_date"] - timedelta(days=WINDOW_DAYS)
         candidates["end_date"] = candidates["linkage_date"] + timedelta(days=WINDOW_DAYS)
+
+        currencies = group_currencies(candidates)
+        candidates = candidates.merge(currencies, left_on="group", right_index=True, how="left")
+        changes = currencies[currencies["old_currency"].notna() & currencies["new_currency"].notna()
+                             & (currencies["old_currency"] != currencies["new_currency"])]
+        logger.info(f"{len(changes)} groups with a currency change between old and new trading items")
 
         groups_file = os.path.join(OUTPUT_DIR, "linkage_groups.csv")
         candidates.to_csv(groups_file, index=False)

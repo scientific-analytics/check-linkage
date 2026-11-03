@@ -85,7 +85,7 @@ par Step 2. La linkage aller (2008) avait été écartée par Step 2 parce que l
 
 | Groupe | Société | Décision |
 |---|---|---|
-| 19 | Alphabet | no linkage (2788:VUH Class A, 3742:JAS Class C) |
+| 19 | Alphabet | 5093:DOB → 2788:VUH (Class A), share 291.328, 33.582 et 3723:KAH → 3742:JAS (Class C), share 345.504, 32.272, 2015-10-06 ; réorganisation Google → Alphabet 1 pour 1 (décision changée le 2026-11-03, avant : no linkage) |
 | 56 | Biglari | 6196:BAN → 5371:PYR (Class B), 2018-05-01, 242.69, share 2.068 ; 1553:TYQ Class A = new security |
 | 143 | Fidelity National Financial | 1094:QIW → 2291:FYR (FNF), 2014-06-30, 32.76, share 276 ; 3806:KIF FNFV = new security |
 | 157 | Lundbeck | 1119:MAK → 3414:HIW (B Shares), 2022-06-10, 32.50, share 794.272 ; 6922:SIK A Shares = new security |
