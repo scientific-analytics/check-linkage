@@ -305,6 +305,8 @@ def main():
         if g in manual_groups:
             continue
         old, new = group[group["role"] == "old"], group[group["role"] == "new"]
+        if g in removed_groups and (len(old) != 1 or len(new) != 1 or old["asset"].iloc[0] == new["asset"].iloc[0]):
+            continue  # removed group with no candidate: decision written from the CSV row, not in Problems
         if len(old) != 1 or len(new) != 1:
             problems += problem_rows_of_group(group, f"several securities alive at the same time: {len(old)} old / "
                                                      f"{len(new)} new trading items")
@@ -516,6 +518,17 @@ def main():
     group_rows = sorted((v for v in group_rows if v["Link"] not in initial_links),
                         key=lambda v: (str(v["company"]).strip(), v["Date"]))
     doc_rows = initial_rows + group_rows + manual_rows
+
+    # removed groups with no candidate left (e.g. their manual linkage was deleted): the decision is written
+    # from the row of the CSV
+    matched = {g for g, *_ in removed}
+    matched_links = {v["Link"] for _, v, *_ in removed}
+    for _, r in removed_rows[removed_rows["group"].notna()].iterrows():
+        if int(r["group"]) not in matched and r["Link"] not in matched_links:
+            v = {c: (None if pd.isna(r[c]) else r[c]) for c in ("company", "assetid", "tradingitemid", "security",
+                                                                 "Link", "share", "price", "Date")}
+            v["Date"] = None if v["Date"] is None else v["Date"].to_pydatetime()
+            removed.append((int(r["group"]), v, "linkage removed", r["comment"], r["decided_on"].to_pydatetime()))
 
     moved_links = {d[6] for d in decisions if d[-1].endswith("(manual linkage)")}
     decision_list = decision_rows(manual_df, removed, decisions, moved_links)

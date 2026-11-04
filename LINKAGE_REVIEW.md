@@ -156,8 +156,10 @@ ANDRITZ Fabrics.
 ### Points ouverts de cette revue
 
 1. Linkages avec un saut < 2 % (132) non revues une par une.
-2. Lundbeck (157) et Warner Bros. Discovery (341) apparaissent à la fois en « manual linkage added » et en
-   « linkage removed » dans Decisions : supprimer les anciennes lignes « manual linkage added ».
+2. ~~Lundbeck (157) et Warner Bros. Discovery (341) en double « manual linkage added » / « linkage removed »~~
+   **fait le 2026-11-04** : lignes « manual linkage added » supprimées du CSV, détails reportés sur les lignes
+   « linkage removed » ; Step 4b écrit un retrait sans candidat directement dans Decisions et n'envoie plus un
+   groupe retiré dans Problems (WBD 341 : 1 old / 2 new).
 3. La règle « price jump » de Step 4b compare des `priceclose` sans facteurs d'ajustement (ex. Berkeley +11.6 %
    = facteur 0.891).
 4. Devises manquantes dans DocLinkage : Criteo `new_currency` = USD et Rheinmetall `old_currency` = EUR (CIQ),
