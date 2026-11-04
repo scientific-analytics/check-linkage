@@ -88,21 +88,82 @@ par Step 2. La linkage aller (2008) avait été écartée par Step 2 parce que l
 | 19 | Alphabet | 5093:DOB → 2788:VUH (Class A), share 291.328, 33.582 et 3723:KAH → 3742:JAS (Class C), share 345.504, 32.272, 2015-10-06 ; réorganisation Google → Alphabet 1 pour 1 (décision changée le 2026-11-03, avant : no linkage) |
 | 56 | Biglari | 6196:BAN → 5371:PYR (Class B), 2018-05-01, 242.69, share 2.068 ; 1553:TYQ Class A = new security |
 | 143 | Fidelity National Financial | 1094:QIW → 2291:FYR (FNF), 2014-06-30, 32.76, share 276 ; 3806:KIF FNFV = new security |
-| 157 | Lundbeck | 1119:MAK → 3414:HIW (B Shares), 2022-06-10, 32.50, share 794.272 ; 6922:SIK A Shares = new security |
+| 157 | Lundbeck | ~~1119:MAK → 3414:HIW (B Shares), 2022-06-10~~ **linkage retirée le 2026-11-04** : éclatement en actions A et B (split CIQ de 5), valeur répartie sur deux classes ; 6922:SIK A Shares = new security |
 | 129 | Esprit Energy Trust | no linkage : facteur d'ajustement (Common Shares échangées ~4 pour 1 part + actions ProspEx le 2004-10-05, non ajusté dans CIQ) |
-| 189 | Liberty Global | no linkage : 2 old (Series A/C) / 2 new (Class A/C), ratio exactement 2:1 sur toute la fenêtre de prix (Virgin Media acq., Inc → plc) — ratio non-1:1 malgré la régularité |
+| 189 | Liberty Global | no linkage : 2 old (Series A/C) / 2 new (Class A/C), échange 1 pour 1 Inc → plc le 2013-06-07 ; le ratio 2:1 des prix vient de CIQ (nouveaux titres ajustés du split 2:1 du 2014-03-04, pas les anciens) : une linkage créerait un saut de −51 % ; les nouveaux titres ont leur propre historique depuis 2004/2005 (commentaire corrigé le 2026-11-03) |
 | 193 | Lionsgate | no linkage : merge Class A + Class B → Common Shares le 2025-05-06, 2 old / 1 new, ratio non-1:1 |
 | 194 | Lionsgate | no linkage : split Old Common Shares → Class A + Class B le 2016-12-09, 1 old / 2 new, ratio non-1:1 |
 | 204 | Mediclinic | no linkage : fusion avec Al Noor Hospitals (2016-02-16), changement de devise ZAR→GBP et de bourse (Johannesburg→Londres), ratio non-1:1 |
-| 230 | Odfjell | no linkage : Series A et Series B sont deux classes permanentes cotées depuis 1992 (overlap confirmé dans AUC aux reviews 2005-03-18 et 2005-06-17), pas d'événement corporate |
+| 230 | Odfjell | no linkage : Series A et Series B sont deux classes permanentes cotées depuis 1992, toujours cotées, prix différents (A 125 / B 111 NOK au 2005-06-17) ; AUC alterne entre elles (les deux en 2005-03 et 2005-06, B 2005-09/2005-12, A 2006-03, B 2008-03) ; société dans 6 reviews sur 98, pas d'événement corporate ; chaque classe a son historique CIQ depuis 1992 |
 | 240 | Paramount Skydance | no linkage : fusion Skydance (2025-08-06), consolidation Class A + Class B → Class B, ratio non-uniforme (A 1.5:1, B 1:1), pas d'overlap AUC |
 | 241 | Paramount Skydance | no linkage : spin-off Viacom/CBS (2006-01-03), Old Viacom scindé en CBS Corporation (ce companyid) et New Viacom Inc. (companyid 25403751, non suivi dans ce pipeline), ratio actions non uniforme (0.47 B, 0.50 A) |
 | 287 | SunPower | 3897:BOD (Class A, la plus liquide) → 7045:MEM (Common Stock), 2011-11-17, 7.50, share 1 ; reclassification 1-pour-1 confirmée par SEC/Jones Day ; 7965:KUG Class B non lié |
 | 288 | Sunshine Lake Pharma | no linkage : gap de 7 jours ouvrés et saut de prix ~4.3x entre 3095:BEG (13.02) et 2966:WUC (56.25), trop important |
 | 299 | Telecom Italia | no linkage : reverse merger avec la société mère Olivetti S.p.A. (2003-08-04), prix/actions incohérents entre Old Ordinary Shares et les 2 nouvelles lignes (Ordinary + Saving Shares) |
-| 341 | Warner Bros. Discovery | 7378:NOD (Series A, la plus liquide) → 7463:MON (New Ordinary Shares), 2022-04-08, 24.43, share 1 ; reclassification 1-pour-1 confirmée par le 10-K SEC (fusion WarnerMedia/Discovery) ; 6251:CEV Series C non liée |
+| 341 | Warner Bros. Discovery | ~~7378:NOD → 7463:MON, 2022-04-08~~ **linkage retirée le 2026-11-04** : fusion Discovery / WarnerMedia avec émission d'actions (share 170 → 2427) ; 6251:CEV Series C non liée |
 | 342 | Warner Bros. Discovery | no linkage : restructuration Discovery Holding Company → Discovery Communications (2008-09-18), chaque action convertie en 0.5 Series A + 0.5 Series C (SEC S-4 confirmé), ratio non-1:1 |
-| 351 | Wilh. Wilhelmsen | no linkage : Class A et Class B sont deux classes permanentes cotées depuis 1992, société seulement sporadiquement dans AUC (12 reviews sur 98, trous de ~7 ans et ~6.75 ans), pas d'événement corporate |
+| 351 | Wilh. Wilhelmsen | no linkage : Class A et Class B sont deux classes permanentes cotées depuis 1992, toujours cotées, prix différents ; AUC alterne entre elles (A 2013-03/2014-03, B 2014-06, A 2015-06/2018-03) et les a toutes les deux en 2017 et depuis 2024-12 ; société seulement sporadiquement dans AUC (12 reviews sur 98, trous de ~7 ans et ~6.75 ans), pas d'événement corporate ; chaque classe a son historique CIQ depuis 1992 |
+
+## Revue des sauts de prix (session du 2026-11-04)
+
+Revue des linkages de DocLinkage v5 dont le saut de prix (`jump_pct`, dernier prix de l'ancien titre → premier
+prix du nouveau) est supérieur à 2 % en valeur absolue. Pour chaque linkage : séries CIQ des deux trading items,
+facteurs d'ajustement, splits, distributions, évolution du share, et recherche de l'opération (communiqués, SEC,
+RNS, SENS). La tranche 2–5 % a été vérifiée avec sources ; le détail est dans les commentaires de
+`input/manual_decisions.csv`.
+
+### Règle
+
+Une linkage veut dire que les deux séries de prix se recollent, facteurs d'ajustement CIQ appliqués, sans saut.
+
+- **Garder** : échange 1:1 pour les porteurs de l'ancien titre, sans cash, sans scission, sans nouvelle classe et
+  sans émission d'actions pour une autre société. Cas typiques : nouvelle holding, changement de domicile,
+  conversion de trust ou de LP en société, transfert de cotation, conversion 1:1 d'une classe en classe unique,
+  actionnaire de contrôle qui distribue sa participation (changement de flottant), regroupement pur couvert
+  par le facteur CIQ (Breedon).
+- **Retirer** : fusion avec émission d'actions (même 1:1 pour nos porteurs), SPAC, cash versé aux porteurs, ratio
+  différent de 1:1, retour de capital (B shares), scission ou distribution d'une autre société, sortie de faillite,
+  éclatement en plusieurs classes. Dans le doute, retirer (LondonMetric).
+
+### Linkages retirées (59)
+
+Toutes en « linkage removed » dans `input/manual_decisions.csv` (decided_on 2026-11-04).
+
+| Saut | Groupes retirés |
+|---|---|
+| 10–20 % | 142 Fibria, 283 Sprint, 118 Designer Brands, 353 Williams Partners, 301 Berkeley, 359 Zillow, 126 Enviri, 266 Saxon Capital, 286 Stride, 41 BGC |
+| 5–10 % | 32 Apartment Income REIT, 68 Brookfield Property REIT (GGP 2018), 177 Johnson Controls, 271 Seitel, 327 Vermilion, 157 Lundbeck, 361 la Rinascente, 182 Kirkland Lake Gold, 167 IHS Markit, 42 Banc of California, 267 Scentre, 341 Warner Bros. Discovery, 92 ChampionX, 339 WTW, 231 Old API Wind-down (Aralez), 43 Banco BPM, 198 LondonMetric (dans le doute) |
+| 2–5 % | 268 Seabridge (+ ligne du fichier livré), 274 Sika, 356 Xstelos, 357 YTB, 200 Marshalls, 2 ADTRAN (+ ligne du fichier livré), 23 Altice, 113 DSM-Firmenich, 192 Lion Finance, 209 NEPI Rockcastle, 278 Six Flags, 362 nCino, 5 Xerium/ANDRITZ (+ ligne du fichier livré), 31 Antero Midstream, 58 BlackRock, 66 Broadcom, 127 Envision, 148 GCI Liberty, 154 Gulf Development, 255 R1 RCM, 280 Spectrum Brands, 202 Mebuki 2016, 291 TCF, 329 Viatris, 345 WestRock, 20 Alta Mesa, 69 GGP 2010, 96 Argo (Clearbrook), 150 Gramercy, 216 Noble, 276 Sirius XM 2024, 350 Whole Earth |
+
+### Linkages gardées après examen (mouvement de marché)
+
+- 10–20 % : Sibanye, Advantage Energy, Coast Entertainment.
+- 5–10 % : APA, Lazard, LIN Media, Criteo, Bank of Ireland, Mebuki 2008, Centamin, Northam, Clear Channel Outdoor.
+- 2–5 % (43) : notamment Suzano, CBD et SunPower (classe unique 1:1), Aroundtown (transfert de cotation),
+  Veren (conversion de trust via Wild River, 1:1), Breedon (regroupement 5:1 couvert par CIQ), Metlen (option
+  cash du squeeze-out ignorée), Tronox (rachat de Cristal traité comme opération distincte), Black Knight et
+  Calumet (à revoir si la règle sur l'émission est appliquée strictement), Aimia, Trinidad, Boyd, Iyogin et
+  Growthpoint (1:1 confirmé seulement par des sources secondaires et CIQ).
+
+Résultat : DocLinkage v5 passe de 246 à 187 linkages.
+
+### Changement de `Step_4b_rules.py`
+
+Une ligne « linkage removed » **sans groupe** dans `manual_decisions.csv` retire la ligne du fichier livré
+(`input/Historical_DocLinkage.xlsx`) qui a le même couple (assetid, Link). Utilisé pour Seabridge, ADTRAN et
+ANDRITZ Fabrics.
+
+### Points ouverts de cette revue
+
+1. Linkages avec un saut < 2 % (132) non revues une par une.
+2. Lundbeck (157) et Warner Bros. Discovery (341) apparaissent à la fois en « manual linkage added » et en
+   « linkage removed » dans Decisions : supprimer les anciennes lignes « manual linkage added ».
+3. La règle « price jump » de Step 4b compare des `priceclose` sans facteurs d'ajustement (ex. Berkeley +11.6 %
+   = facteur 0.891).
+4. Devises manquantes dans DocLinkage : Criteo `new_currency` = USD et Rheinmetall `old_currency` = EUR (CIQ),
+   les trading items sont absents de `auc.csv`.
+5. Données AUC : share des trust units de Crescent Point erratique en 2008–2009 (113 / 19 / 125 / 20), assets
+   d'anciens titres non fermés dans `auc_asset.csv` (`until` = 2099-12-31, ex. 6362:HEP, 5372:DUP ACMP, 3723:LIC).
 
 ## Groupes restant dans `Problems`
 

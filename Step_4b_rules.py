@@ -185,8 +185,8 @@ def decision_rows(manual_df, removed, rule_decisions, moved_links):
     linkages moved out by the rules replaced by their rule decision."""
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     rows = [d + [today] for d in rule_decisions]
-    for g, v, comment, decided_on in removed:
-        rows.append([g, v["company"], "linkage removed", v["assetid"], v["tradingitemid"], v["security"], v["Link"],
+    for g, v, decision, comment, decided_on in removed:
+        rows.append([g, v["company"], decision, v["assetid"], v["tradingitemid"], v["security"], v["Link"],
                      v["share"], v["price"], v["Date"], comment, decided_on])
     for _, r in manual_df[manual_df["decision"] != "linkage removed"].iterrows():
         if r["decision"] == "manual linkage added" and r["Link"] in moved_links:
@@ -292,8 +292,12 @@ def main():
     auc_assets = manual.load_auc_assets()
     manual_df = load_manual()
     manual_groups = set(manual_df.loc[manual_df["decision"] != "linkage removed", "group"].dropna().astype(int))
+    removed_rows = manual_df[manual_df["decision"] == "linkage removed"]
     removed_groups = {int(r["group"]): (r["Link"], r["comment"], r["decided_on"].to_pydatetime())
-                      for _, r in manual_df[manual_df["decision"] == "linkage removed"].iterrows()}
+                      for _, r in removed_rows[removed_rows["group"].notna()].iterrows()}
+    # rows of the initial file (no group) removed by (assetid, Link)
+    removed_initial = {(r["assetid"], r["Link"]): (r["Link"], r["comment"], r["decided_on"].to_pydatetime())
+                       for _, r in removed_rows[removed_rows["group"].isna()].iterrows()}
 
     # 1. candidate rows: (origin, group, values, old_ti, old_last, old_currency, new_currency)
     candidates, problems = [], []
@@ -342,7 +346,7 @@ def main():
     for _, r in manual_df[manual_df["decision"] == "manual linkage added"].iterrows():
         g = int(r["group"])
         values = {c: r[c] for c in COLUMNS if c in r.index}
-        values.update(stamp=STAMP, note="-", Date=r["Date"].to_pydatetime(),
+        values.update(stamp=STAMP, note="-", Date=r["Date"].to_pydatetime(), manual_comment=r["comment"],
                       **{c: int(r[c]) for c in ("companyid", "securityid", "tradingitemid")})
         old_ti = manual.old_trading_item(values["tradingitemid"], values["assetid"], values["Link"], groups, {}, {},
                                          auc_assets, pd.Timestamp(values["Date"]))
@@ -438,10 +442,17 @@ def main():
         info["old_currency"], info["new_currency"] = old_cur, new_cur
         info["old_tradingitemid"] = None if old_ti is None else int(old_ti)
         values.update(info)
-        if g in removed_groups:
-            link, comment, decided_on = removed_groups[g]
-            reason = result[1] if isinstance(result, tuple) else result
-            removed.append((g, values, comment + ("" if reason is None else f"; {reason}"), decided_on))
+        removal = removed_groups.get(g) if g is not None else \
+            removed_initial.get((str(values["assetid"]).strip(), str(values["Link"]).strip())) \
+            if origin == "initial file" else None
+        if removal is not None:
+            link, comment, decided_on = removal
+            if destination == "decision":
+                # the rules also move the linkage out: their decision (e.g. currency change) is the reason
+                removed.append((g, values, result[0], f"{result[1]}; manual decision: {comment}", decided_on))
+            else:
+                removed.append((g, values, "linkage removed", comment + ("" if result is None else f"; {result}"),
+                                decided_on))
             logger.info(f"{label}: linkage removed by manual decision ({comment})")
             continue
         if destination == "linkage":
@@ -459,7 +470,9 @@ def main():
             decision, reason = result
             decisions.append([g, str(values["company"]).strip(), decision, values["assetid"], values["tradingitemid"],
                               values["security"], values["Link"], values["share"], values["price"], values["Date"],
-                              f"{reason}" + (f"; {values['forced']}" if "forced" in values else "") + f" ({origin})"])
+                              f"{reason}" + (f"; {values['forced']}" if "forced" in values else "")
+                              + (f"; manual decision: {values['manual_comment']}" if "manual_comment" in values else "")
+                              + f" ({origin})"])
             logger.info(f"{label}: {decision} ({reason})")
 
     # share is indicative and CIQ prices are split adjusted: share of a group or manual linkage x CIQ adjustment
